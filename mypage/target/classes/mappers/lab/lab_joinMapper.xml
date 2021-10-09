@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+        
+<mapper namespace="com.cameldev.mypage.mappers.lab.lab_joinMapper">
+        
+    <insert id="apply"> 
+        INSERT INTO lab_join ( 
+            memberno
+            , lab
+            , content
+            , state
+        ) VALUES ( 
+            #{memberno} 
+            , #{lab} 
+            , #{content} 
+            , '평가중'
+        ) 
+    </insert> 
+
+</mapper>

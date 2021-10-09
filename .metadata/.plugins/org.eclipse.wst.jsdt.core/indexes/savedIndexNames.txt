@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\LG\OneDrive\πŸ≈¡ »≠∏È\Java_work\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+359755018.index
+1764920824.index
+218082235.index
+2621513059.index
+1829879012.index
+4245805075.index

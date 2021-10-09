@@ -1,0 +1,93 @@
+#데이터베이스 생성
+create database Computer_Engineering;
+
+#테이블 생성
+create table Major(
+	major char(20),
+    intro char(80) ,
+    represent_professor char(20),
+    history char(80),
+    goal char(80) ,
+    facility char(40),
+    PRIMARY KEY(major)
+);
+
+create table Member(
+memberno char(20) NOT NULL,
+ID char(20) ,
+PW char(20),
+name char(20),
+major char(20),
+email char(20),
+lab char(20),
+phone char(20),
+age int,
+grade int,
+state char(40),
+primary key(memberno)
+);
+
+create table Lab(
+	lab char(40),
+    professor char(40),
+    intro char(80),
+    represent_student char(40),
+    address char(80),
+    primary key (lab)
+);
+
+create table Notice(
+	noticeno char(40),
+    title char(40),
+    name char(40),
+    content char(80),
+    datetime DATETIME,
+    n_type char(40),
+    primary key(noticeno)
+);
+
+create table Comment(
+	commentno char(40),
+    noticeno char(40),
+    content char(80),
+    memberno int,
+    datetime DATETIME,
+    primary key(commentno)
+);
+
+create table Thesis(
+	thesisno char(40),
+	memberno int,
+    title char(40),
+    datetime DATETIME,
+    content char(80),
+    primary key(thesisno)
+);
+
+create table subject(
+	major char(40),
+    name char(40),
+    intro char(80),
+    primary key(major,name)
+);
+
+create table Facility(
+	name char(50),
+    place char(20),
+    primary key (name)
+    
+);
+
+create table Star(
+	memberno int,
+    noticeno char(40),
+	primary key(memberno,noticeno)
+);
+
+create table Lab_join(
+	memberno int,
+    lab char(40),
+    content char(80),
+    state char(80),
+    primary key(memberno, lab,state)
+);

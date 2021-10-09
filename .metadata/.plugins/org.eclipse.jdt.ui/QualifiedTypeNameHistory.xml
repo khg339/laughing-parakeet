@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
+<fullyQualifiedTypeName name="com.cameldev.mypage.persistence.Lab_joinDAO"/>
+<fullyQualifiedTypeName name="com.cameldev.mypage.service.Lab_joinService"/>
+<fullyQualifiedTypeName name="com.cameldev.mypage.domain.Lab_joinVO"/>
+</qualifiedTypeNameHistroy>
