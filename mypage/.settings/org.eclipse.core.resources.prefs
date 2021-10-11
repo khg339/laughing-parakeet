@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 encoding//src/main/webapp/WEB-INF/views/notice/listRS.jsp=UTF-8
+=======
+>>>>>>> de588127677b6709c5b80c4ca7e1f20ae69fd790
 encoding//src/main/webapp/WEB-INF/views/user/login.jsp=UTF-8
