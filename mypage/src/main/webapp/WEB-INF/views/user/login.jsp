@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -91,13 +93,13 @@
             </div>
             <div class="loginBox">
                 <h1>Login</h1><br>
-                <form class="loginForm" action="#" method=post>
+                <form class="loginForm" action="${path}/mypage/user/loginPost" method=post>
                     <div class="idForm">
-                        <input type="text" name="id" size=20>
+                        <input type="text" name="ID" size=20>
                         <label for="id">ID</label>
                     </div><br>
                     <div class="pwForm">
-                        <input type="password" name="pw" size=20>
+                        <input type="password" name="PW" size=20>
                         <label for="pw">PW</label>
                     </div>
                     <div class="btn-area">
