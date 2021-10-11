@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-=======
->>>>>>> de588127677b6709c5b80c4ca7e1f20ae69fd790
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,39 +18,20 @@
     color:white;
     background-color:rgb(0, 0, 0);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> de588127677b6709c5b80c4ca7e1f20ae69fd790
 .header{
     display:flex;
     width:1280px;
     height:170px;
     margin:auto;
-<<<<<<< HEAD
 }
-=======
-
-}
-
->>>>>>> de588127677b6709c5b80c4ca7e1f20ae69fd790
 .logo>img{
     width:150px;
     height:auto;
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> de588127677b6709c5b80c4ca7e1f20ae69fd790
 .menubar{
     width:calc(1280px- 170px);
     height:150px; 
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> de588127677b6709c5b80c4ca7e1f20ae69fd790
 .upper_nav{
     display:flex;
     justify-content:flex-end;
@@ -64,10 +42,6 @@
     margin-left:10px;
     margin-right:10px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> de588127677b6709c5b80c4ca7e1f20ae69fd790
 .nav{
     display:flex;
     justify-content:flex-end;
@@ -119,7 +93,6 @@
             </div>
             <div class="loginBox">
                 <h1>Login</h1><br>
-<<<<<<< HEAD
                 <form class="loginForm" action="${path}/mypage/user/loginPost" method=post>
                     <div class="idForm">
                         <input type="text" name="ID" size=20>
@@ -127,15 +100,6 @@
                     </div><br>
                     <div class="pwForm">
                         <input type="password" name="PW" size=20>
-=======
-                <form class="loginForm" action="#" method="post">
-                    <div class="idForm">
-                        <input type="text" name="id" size=20>
-                        <label for="id">ID</label>
-                    </div><br>
-                    <div class="pwForm">
-                        <input type="password" name="pw" size=20>
->>>>>>> de588127677b6709c5b80c4ca7e1f20ae69fd790
                         <label for="pw">PW</label>
                     </div>
                     <div class="btn-area">
