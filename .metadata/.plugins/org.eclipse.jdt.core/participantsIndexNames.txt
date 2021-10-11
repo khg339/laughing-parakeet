@@ -1,9 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\LG\OneDrive\πŸ≈¡ »≠∏È\Java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4008189095.index
-\mypage\src\main\java
-C:\Users\LG\OneDrive\πŸ≈¡ »≠∏È\Java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\675028065.index
-\mypage\src\main\java
-C:\Users\LG\OneDrive\πŸ≈¡ »≠∏È\Java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1504172038.index
-\mypage\src\main\java
-C:\Users\LG\OneDrive\πŸ≈¡ »≠∏È\Java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3411439063.index
-\mypage\src\main\java

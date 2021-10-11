@@ -1,49 +1,116 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="EUC-KR">
-<title>Login page</title>
-</head>
-<body>
-   <form action="${path}/mypage/user/loginPost" method="post">
-   <div class="input-group mb-3">
-      <input type="text" name="ID" class="form-control" placeholder="ID">
-      <div class="input-group-append">
-         <div class="input-group=text">
-            <span class="fas fa-exclamation"></span>
-         </div>
-      </div>
-   </div>
-   <div class="input-group mb-3">
-      <input type="text" name="PW" class="form-control" placeholder="PW">
-      <div class="input-group-append">
-         <div class="input-group=text">
-            <span class="fas fa-lock"></span>
-         </div>
-      </div>
-   </div>
-   <div class="row">
-      <div class="col-8">
-         <div class="icheck-primary">
-            <input type="checkbox"  id="remember">
-            <label for="remember">
-            Remember Me
-            </label>
-         </div>
-      </div>
-      <div class="col-4">
-         <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-      </div>
-   </div>
-   </form>
+    <head>
+        <title>í•œì‹ ëŒ€í•™êµ ì»´í“¨í„°ê³µí•™ë¶€</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <style>
+            *{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style:none;
+    text-decoration:none;
+    border-collapse:collapse;
+    margin:0px;
+    padding:0px;
+    color:white;
+    background-color:rgb(0, 0, 0);
+}
+.header{
+    display:flex;
+    width:1280px;
+    height:170px;
+    margin:auto;
+}
+.logo>img{
+    width:150px;
+    height:auto;
+}
+.menubar{
+    width:calc(1280px- 170px);
+    height:150px; 
+}
+.upper_nav{
+    display:flex;
+    justify-content:flex-end;
+    width: 1110px;
+    height:20px;
+}
+.upper_nav>li{
+    margin-left:10px;
+    margin-right:10px;
+}
+.nav{
+    display:flex;
+    justify-content:flex-end;
+    line-height:140px;
+    font-size:26px;
+    width: 1110px;
+    height:140px;
+}
+.nav>li{
+    margin-left:30px;
+    margin-right:40px;
+}
+            body{display:flex; justify-content:center; align-items:center;}
+            .loginBox{justify-content:center; align-items:center; width:400px; height:300px; }
+            .loginForm{position: relative; z-index:2;}
+            .loginBox h1{font-size:32px; text-align: center;}
+            .idForm{position:relative; }
+            .pwForm{position:relative; }
+            .idForm input{width: 100%; padding:20px 10px 10px; background-color:rgba(255, 255, 255, 0.116);
+             border:none; border-bottom: 1px solid rgb(230, 227, 227); font-size:18px; outline:none;}
+             .pwForm input{width: 100%; padding:20px 10px 10px; background-color:rgba(255, 255, 255, 0.116);
+             border:none; border-bottom: 1px solid rgb(230, 227, 227); font-size:18px; outline:none;}
+            label{position:absolute; margin-bottom:10px; left:10px; top:0px; font-size:20px;}
+            .btn-area{margin-top:30px; justify-content:center; align-items:center;}
+            .btn-area input{width:30%; height:40px; background-color: rgb(245, 236, 235); color:black; font-size:15px; border:none; border-radius:10px;}
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <div class="header">
+                <div class="logo">
+                    <img src="media/hsLogo1.png">
+                </div>
+                <div class="menubar">
+                    <ul class="upper_nav">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">SITEMAP</a></li>
+                        <li><a href="#">LOGIN</a></li>
+                        <li><a href="#">JOIN</a></li>
+                    </ul>
+                    <ul class="nav">
+                        <li><a href="#">í•™ë¶€ì†Œê°œ</a></li>
+                        <li><a href="#">ê³µì§€ì‚¬í•­</a></li>
+                        <li><a href="#">êµìˆ˜ë‹˜ê³µì§€</a></li>
+                        <li><a href="#">LAB</a></li>
+                        <li><a href="#">ì¡¸ì—…ë…¼ë¬¸</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="loginBox">
+                <h1>Login</h1><br>
+                <form class="loginForm" action="#" method=post>
+                    <div class="idForm">
+                        <input type="text" name="id" size=20>
+                        <label for="id">ID</label>
+                    </div><br>
+                    <div class="pwForm">
+                        <input type="password" name="pw" size=20>
+                        <label for="pw">PW</label>
+                    </div>
+                    <div class="btn-area">
+                        <input type="submit" value="LOGIN">
+                    </div>
+                </form>
+
 <script>
    var msg="${msg}";
    if(msg== "REGISTERED"){
-      alert("È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù. ·Î±×ÀÎÇØÁÖ¼¼¿ä");
+      alert("íšŒì›ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ë¡œê·¸ì¸í•´ì£¼ì„¸ìš”");
    }else if(msg=="FALURE"){
-      alert("¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä");
+      alert("ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”");
    }
    $(function(){
       $('input').iCheck({
