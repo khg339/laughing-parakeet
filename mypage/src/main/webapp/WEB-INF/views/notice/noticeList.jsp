@@ -8,17 +8,26 @@
 </head>
 <body>
 
-<table>
-	 <thead>
-		  <tr>
-			   <th>공지번호</th>
-			   <th>제목</th>
-			   <th>작성자</th>
-			   <th>내용</th>
-			   <th>작성일</th>
-			   <th>공지유형</th>
-		  </tr>
-	 </thead>
+<table border=1 width=350>
+    <thead>
+        <tr>
+            <td>공지번호</td>
+            <td>제목</td>
+            <td>작성자</td>
+            <td>내용</td>
+            <td>작성일</td>
+            <td>유형</td>
+            
+        </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+    
+</table>
+</body>
+</html>
+
  
  <tbody>
  		<c:forEach items="${noticelist}" var="noticelist">
