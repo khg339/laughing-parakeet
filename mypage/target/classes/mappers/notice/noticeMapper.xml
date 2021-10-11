@@ -3,9 +3,9 @@
  
 <mapper namespace="com.cameldev.mypage.notice.noticeMapper">
  
-    <select id="getNoticeList" parameterType="com.cameldev.mypage.domain.NoticeForm" resultType="com.cameldev.mypage.domain.NoticeDTO">
+    <select id="noticelist" resultType="com.cameldev.mypage.domain.NoticeDTO">
     
-        SELECT *
+        SELECT noticeno,title,name,content,datetime,n_type
         FROM computer_engineering.notice
     
     </select>
