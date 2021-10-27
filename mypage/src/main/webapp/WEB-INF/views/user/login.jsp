@@ -84,9 +84,9 @@
                     </ul>
                     <ul class="nav">
                         <li><a href="#">학부소개</a></li>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">교수님공지</a></li>
-                        <li><a href="#">LAB</a></li>
+                        <li><a href="/mypage/notice/noticeList">공지사항</a></li>
+                        <li><a href="/mypage/notice/noticeList">교수님공지</a></li>
+                        <li><a href="/mypage/lab/labMain">LAB</a></li>
                         <li><a href="#">졸업논문</a></li>
                     </ul>
                 </div>

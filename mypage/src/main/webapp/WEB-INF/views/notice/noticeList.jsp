@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<table border=1 width=350>
-    <thead>
+<table border=1>
+    
         <tr>
             <td>공지번호</td>
             <td>제목</td>
@@ -19,19 +19,9 @@
             <td>유형</td>
             
         </tr>
-    </thead>
-    <tbody id="tbody">
-
-    </tbody>
-    
-</table>
-</body>
-</html>
-
- 
- <tbody>
- 		<c:forEach items="${noticelist}" var="noticelist">
+        <c:forEach items="${noticelist}" var="noticelist">
  			<tr>
+ 				
 				  <td>${noticelist.noticeno}</td>
 				  <td>${noticelist.title}</td>
 				  <td>${noticelist.name}</td>
@@ -40,6 +30,14 @@
 				  <td>${noticelist.n_type}</td>
  			</tr>
 		</c:forEach>
+   
+</table>
+</body>
+</html>
+
+ 
+ <tbody>
+ 		
 
 </body>
 </html>
