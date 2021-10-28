@@ -21,7 +21,7 @@
                     <ul class="upper_nav">
                         <li><a href="/mypage/">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
-                        <li><a href="Mypage_info.html">MYPAGE</a></li>
+                        <li><a href="/mypage/user/my">MYPAGE</a></li>
                     </ul>
                     <ul class="nav">
                         <li><a href="/mypage/major/majorList">학부소개</a></li>

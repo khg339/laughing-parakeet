@@ -42,6 +42,13 @@
                             <input type="password" name="PW" size=20>
                             <label for="pw">PW</label>
                         </div>
+                         <div class="icheck-primary">
+				            <input type="checkbox"  id="remember">
+				            <label for="remember">
+				            Remember Me
+			            </label>
+			         </div>
+                        
                         <div class="btn-area">
                             <input id="btn" type="submit" value="LOGIN">
                         </div>
@@ -59,11 +66,9 @@
                     <li><a href="http://www.hs.ac.kr/kor/4837/subview.do">학사일정</a></li>
                     <li><a href="https://cert.hs.ac.kr/icerti/index_internet.jsp">인터넷증명발급</a></li>
                     <li><a href="http://sugang.hs.ac.kr/login">수강신청</a></li>
-                    <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
-                    
-                </ul>
+                    <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li></ul>
             </footer>
-        </div>
+			</div>           
    
 
 <script>
