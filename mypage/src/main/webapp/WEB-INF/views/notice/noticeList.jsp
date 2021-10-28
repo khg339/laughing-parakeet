@@ -14,7 +14,7 @@
 <div id="page">
             <div class="header">
                 <div class="logo">
-                    <a href="Main.html"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
+                    <a href="/mypage/"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
                 </div>
                      <div class="menubar">
                      <ul class="upper_nav">
