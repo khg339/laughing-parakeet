@@ -4,10 +4,31 @@
 <mapper namespace="com.cameldev.mypage.notice.noticeMapper">
  
     <select id="noticelist" resultType="com.cameldev.mypage.domain.NoticeDTO">
-    
         SELECT noticeno,title,name,content,datetime,n_type
-        FROM computer_engineering.notice
-    
+		FROM computer_engineering.notice
+		where n_type="학부"
+		order by datetime desc
     </select>
+    
+    <select id="noticelist2" resultType="com.cameldev.mypage.domain.NoticeDTO">
+        SELECT noticeno,title,name,content,datetime,n_type
+		FROM computer_engineering.notice
+		where n_type="교수님"
+		order by datetime desc
+    </select>
+    
+    <select id="select" parameterType="String" resultType="com.cameldev.mypage.domain.NoticeDTO">
+    select *
+	from computer_engineering.notice
+	where noticeno=#{noticeno} 
+    </select>
+    
+      <select id="noticelist3" resultType="com.cameldev.mypage.domain.NoticeDTO">
+        SELECT noticeno,title,name,content,datetime,n_type
+		FROM computer_engineering.notice
+		where n_type="취업"
+		order by datetime desc
+    </select>
+    
     
 </mapper>
