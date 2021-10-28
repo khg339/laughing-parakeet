@@ -10,43 +10,51 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+import com.cameldev.mypage.domain.UserVO;
+
 public class LoginInterceptor extends HandlerInterceptorAdapter{
-	
-	private static final String LOGIN = "login"; 
-	private static final Logger logger = LoggerFactory.getLogger(LoginInterceptor.class);
-	
-	
-	@Override
-	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
-			ModelAndView modelAndView) throws Exception {
-		HttpSession httpSession = request.getSession(); 
-		ModelMap modelMap = modelAndView.getModelMap(); 
-		Object userVO = modelMap.get("user"); 
-		
-		if (userVO != null) { 
-			logger.info("new login success"); 
-			httpSession.setAttribute(LOGIN, userVO);
-			response.sendRedirect("/mypage"); 
-		}
+   
+   private static final String LOGIN = "login"; 
+   private static final Logger logger = LoggerFactory.getLogger(LoginInterceptor.class);
+   
+   
+   @Override
+   public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
+         ModelAndView modelAndView) throws Exception {
+      
+      HttpSession httpSession = request.getSession(); 
+      ModelMap modelMap = modelAndView.getModelMap(); 
 
-		
-	}
-	
-	
-	@Override
-	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-			throws Exception {
-		
-		HttpSession httpSession = request.getSession(); 
-		// ±‚¡∏¿« ∑Œ±◊¿Œ ¡§∫∏ ¡¶∞≈ 
-		if (httpSession.getAttribute(LOGIN) != null) {
-			logger.info("clear login data before"); 
-			httpSession.removeAttribute(LOGIN); 
-		} 
-		return true;
-	
-	}
-	
+      UserVO userVO = (UserVO) modelMap.get("user"); 
+      
+      
+      if (userVO != null) { 
+         httpSession.setAttribute("id", userVO.getID());
+          httpSession.setAttribute("mno", userVO.getMemberno());
+      
+         logger.info("new login success"); 
+         httpSession.setAttribute(LOGIN, userVO); 
+         response.sendRedirect("/mypage"); 
+      }
 
-	
+      
+   }
+   
+   
+   @Override
+   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+         throws Exception {
+      
+      HttpSession httpSession = request.getSession(); 
+      // Í∏∞Ï°¥Ïùò Î°úÍ∑∏Ïù∏ Ï†ïÎ≥¥ Ï†úÍ±∞ 
+      if (httpSession.getAttribute(LOGIN) != null) {
+         logger.info("clear login data before"); 
+         httpSession.removeAttribute(LOGIN); 
+      } 
+      return true;
+   
+   }
+   
+
+   
 }
