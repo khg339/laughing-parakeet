@@ -42,12 +42,24 @@ public class NoticeController {
 		list=noticeservice.list2();
 		model.addAttribute("noticelist2",list);
 	}
+	@RequestMapping(value = "/noticeList3", method=RequestMethod.GET)
+	public void getNoticeList3(Model model) throws Exception{
+		List<NoticeDTO>list=null;
+		list=noticeservice.list3();
+		model.addAttribute("noticelist3",list);
+	}
 	
 	
 	
 	@RequestMapping(value="/noticeList/read/{noticeno}")
 	public String read(Model model,@PathVariable String noticeno) {
 		model.addAttribute("noticeDTO",noticeservice.read(noticeno));
+		return "/notice/read";
+	}
+	
+	@RequestMapping(value="/noticeList3/read3/{noticeno}")
+	public String read3(Model model,@PathVariable String noticeno) {
+		model.addAttribute("noticeDTO",noticeservice.read3(noticeno));
 		return "/notice/read";
 	}
 

@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-        <title>공지사항 > 학부공지사항</title>
+        <title>공지사항 > 취업공지사항</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_table.css">
 </head>
@@ -40,18 +40,18 @@
                 </div>
                  <div id="content_box">
                     <div><h2>공지사항</h2><br><br>
-                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>학부 공지사항</b><br><br><br>
+                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>취업 공지사항</b><br><br><br>
                         <table border="0">
                         <thead>
                         <tr><th>번호</th><th id="title">제목</th><th>이름</th><th>날짜</th><th>즐겨찾기</th></tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${noticelist}" var="noticelist">
+                        <c:forEach items="${noticelist3}" var="noticelist3">
                         <tr>
-                    <td>${noticelist.noticeno}</td>
-                    <td><a href="/mypage/notice/noticeList/read/${noticelist.noticeno}">${noticelist.title} </a></td>
-                    <td>${noticelist.name}</td>
-                    <td>${noticelist.datetime}</td>
+                    <td>${noticelist3.noticeno}</td>
+                    <td><a href="/mypage/notice/noticeList3/read3/${noticelist3.noticeno}">${noticelist3.title} </a></td>
+                    <td>${noticelist3.name}</td>
+                    <td>${noticelist3.datetime}</td>
                     <td><img src="${pageContext.request.contextPath}/images/plus_icon.png" class="plus_icon"></td>
                       </tr>
                       </c:forEach>
