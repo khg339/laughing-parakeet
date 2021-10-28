@@ -31,7 +31,12 @@ public class UserDAOImpl implements UserDAO {
 		return sqlSession.selectOne(NAMESPACE + ".login", loginDTO);
 	} 
 	
-	
+	@Override
+	public UserVO readMember(String userid) throws Exception {
+		//테스트(컨트롤러) 호출 -> 정보를 저장 -> DB로이동
+		UserVO vo = sqlSession.selectOne(NAMESPACE+".readMember", userid); 
+		return vo;
+	}
 }
 
 

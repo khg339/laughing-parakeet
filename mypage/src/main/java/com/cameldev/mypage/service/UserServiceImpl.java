@@ -10,7 +10,7 @@ import com.cameldev.mypage.persistence.UserDAO;
 
 @Service
 public class UserServiceImpl implements UserService {
-	
+	@Inject
 	private final UserDAO userDAO;
 	
 	@Inject
@@ -29,5 +29,14 @@ public class UserServiceImpl implements UserService {
 	public UserVO login(LoginDTO loginDTO) throws Exception {
 		return userDAO.login(loginDTO);
 	}
+	
+	//회원정보보기
+		@Override
+		public UserVO readMember(String id) throws Exception {
+			System.out.println("S : readMember()실행");
+			
+			return userDAO.readMember(id);
+			
+		}
 
 }

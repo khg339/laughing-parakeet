@@ -1,22 +1,24 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html>
 <head>
-  <meta charset="UTF-8">
-        <title>공지사항 > 학부공지사항</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+     <meta charset="UTF-8">
+     <title>MYPAGE > MY정보</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_table.css">
-
-
 </head>
+<style>
+        #content_box table{width:700px; text-align:center; margin-left: 200px;}
+</style>
 <body>
-<div id="page">
+ <div id="page">
             <div class="header">
                 <div class="logo">
                     <a href="Main.html"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
                 </div>
-                     <div class="menubar">
+                <div class="menubar">
                      <ul class="upper_nav">
                         <li><a href="/mypage/">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
@@ -35,36 +37,28 @@
             <div class="content">
                 <div id="nav_box">
                     <table id="nav_table" cellspacing="0" cellpadding="10">
-                        <caption><b>공지사항</b></caption>
-                        <tr><td><a href="/mypage/notice/noticeList">학부 공지사항</a></td></tr>
-                        <tr><td><a href="/mypage/notice/noticeList3">취업 공지사항</a></td></tr>
+                        <caption><b>MYPAGE</b></caption>
+                        <tr><td><a href="my">MY 정보</a></td></tr>
+                        <tr><td><a href="star">즐겨찾기 목록</a></td></tr>
                     </table>
                 </div>
-                 <div id="content_box">
-                    <div><h2>공지사항</h2><br><br>
-                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>학부 공지사항</b><br><br><br>
+<div id="content_box">
+                    <div><h2>MYPAGE</h2><br><br>
+                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>MY 정보</b><br><br><br>
                         <table border="0">
-                        <thead>
-                        <tr><th>번호</th><th id="title">제목</th><th>이름</th><th>날짜</th><th>즐겨찾기</th></tr>
-                        </thead>
-                        <tbody>
-                        <c:forEach items="${noticelist}" var="noticelist">
-                        <tr>
-                    <td>${noticelist.noticeno}</td>
-                    <td><a href="/mypage/notice/noticeList/read/${noticelist.noticeno}">${noticelist.title} </a></td>
-                    <td>${noticelist.name}</td>
-                    <td>${noticelist.datetime}</td>
-                    <td><img src="${pageContext.request.contextPath}/images/plus_icon.png" class="plus_icon"></td>
-                      </tr>
-                      </c:forEach>
-                      </tbody>            
+                            <tr><td>이름</td><td>${userVO.name}</td><tr>
+                            <tr><td>학번</td><td>${userVO.memberno}</td><tr>
+                            <tr><td>상태</td><td>${userVO.state}</td></tr>
                         </table>
-                         <br><br>
+                        <br><br>
                     </div>
                 </div>
             </div>
-            <footer>
-                <ul>
+	
+	
+
+<footer>
+    <ul>
                     <li><strong>관련사이트</strong></li>
                     <li><a href="http://www.hs.ac.kr/intro.html">한신대학교</a></li>
                     <li><a href="http://ent.hs.ac.kr/ipsi/main/main.asp">입학홍보처</a></li>
@@ -74,13 +68,10 @@
                     <li><a href="http://www.hs.ac.kr/kor/4837/subview.do">학사일정</a></li>
                     <li><a href="https://cert.hs.ac.kr/icerti/index_internet.jsp">인터넷증명발급</a></li>
                     <li><a href="http://sugang.hs.ac.kr/login">수강신청</a></li>
-                    <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li></ul>
+                    <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
             </footer>
         </div>
-            
+
 </body>
 </html>
 
- 
- 
-       

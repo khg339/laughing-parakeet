@@ -3,6 +3,27 @@
           PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
           "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.camldev.mypage.mappers.article.ArticleMapper">
+<mapper namespace="com.cameldev.mypage.mappers.article.ArticleMapper">
+
+ <select id="starlist" resultMap="starVOResultMap">
+		select n_type, title, name, datetime, noticeno
+		from notice
+		where noticeno in (select noticeno from star where memberno=#{memberno})
+	</select>
+       
+  <delete id="delete">
+   DELETE FROM star
+   WHERE noticeno = #{noticeno} </delete>
+
+       <resultMap type="com.cameldev.mypage.domain.StarVO" id="starVOResultMap">
+		
+		<result property="n_type" column="n_type" />
+		<result property="title" column="title" />
+		<result property="memberno" column="memberno" />
+		<result property="name" column="name" />
+		<result property="datetype" column="datetype" />
+		<result property="noticeno" column="noticeno" />
+    	</resultMap>
+
 
 </mapper>

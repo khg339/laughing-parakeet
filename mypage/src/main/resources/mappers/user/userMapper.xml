@@ -53,6 +53,12 @@
 		<result property="state" column="state" />
 		
     	</resultMap>
+    	
+    	<select id="readMember" resultMap="userVOResultMap">
+		select *
+		from Member
+		where ID=#{ID}
+	</select>
 
 </mapper>
 
