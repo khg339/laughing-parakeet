@@ -5,9 +5,12 @@ import com.cameldev.mypage.domain.UserVO;
 
 public interface UserDAO {
 	
-	// È¸¿ø°¡ÀÔ Ã³¸® 
+	//íšŒì›ê°€ì…
 	void register(UserVO userVO) throws Exception;
 
-	//·Î±×ÀÎ Ã³¸®
+	//ë¡œê·¸ì¸
 	UserVO login(LoginDTO loginDTO) throws Exception;
+
+	public UserVO readMember(String userid) throws Exception;
+	
 }
