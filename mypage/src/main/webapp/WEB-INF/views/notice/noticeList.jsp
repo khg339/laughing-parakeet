@@ -23,7 +23,7 @@
  			<tr>
  				
 				  <td>${noticelist.noticeno}</td>
-				  <td>${noticelist.title}</td>
+				  <td><a href="/mypage/notice/noticeList/read/${noticelist.noticeno}">${noticelist.title} </a></td>
 				  <td>${noticelist.name}</td>
 				  <td>${noticelist.content}</td>
 				  <td>${noticelist.datetime}</td>
