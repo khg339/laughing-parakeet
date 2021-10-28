@@ -33,6 +33,12 @@ public class NoticeController {
 		list=noticeservice.list();
 		model.addAttribute("noticelist",list);
 	}
+	@RequestMapping(value = "/noticeList2", method=RequestMethod.GET)
+	public void getNoticeList2(Model model) throws Exception{
+		List<NoticeDTO>list=null;
+		list=noticeservice.list2();
+		model.addAttribute("noticelist2",list);
+	}
 	
 	@RequestMapping(value="/noticeList/read/{noticeno}")
 	public String read(Model model,@PathVariable String noticeno) {

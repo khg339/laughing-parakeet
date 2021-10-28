@@ -22,6 +22,10 @@ public class NotcieServiceImpl implements NoticeService {
 		return noticeDAO.list();
 	}
 	@Override
+	public List<NoticeDTO>list2()  throws Exception{
+		return noticeDAO.list2();
+	}
+	@Override
 	public NoticeDTO read(String noticeno) {
 		return noticeDAO.select(noticeno);
 	}

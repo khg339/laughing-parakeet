@@ -5,15 +5,22 @@
  
     <select id="noticelist" resultType="com.cameldev.mypage.domain.NoticeDTO">
         SELECT noticeno,title,name,content,datetime,n_type
-        FROM computer_engineering.notice
-        order by datetime desc
+		FROM computer_engineering.notice
+		where n_type="취업" or n_type="학부"
+		order by datetime desc
+    </select>
+    
+    <select id="noticelist2" resultType="com.cameldev.mypage.domain.NoticeDTO">
+        SELECT noticeno,title,name,content,datetime,n_type
+		FROM computer_engineering.notice
+		where n_type="교수님"
+		order by datetime desc
     </select>
     
     <select id="select" parameterType="String" resultType="com.cameldev.mypage.domain.NoticeDTO">
     select *
 	from computer_engineering.notice
-	where noticeno=#{noticeno}
-	
+	where noticeno=#{noticeno} 
     </select>
     
 </mapper>

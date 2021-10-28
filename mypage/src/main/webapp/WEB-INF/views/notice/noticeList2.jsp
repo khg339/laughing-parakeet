@@ -19,15 +19,15 @@
             <td>유형</td>
             
         </tr>
-        <c:forEach items="${noticelist}" var="noticelist">
+        <c:forEach items="${noticelist2}" var="noticelist2">
  			<tr>
  				
-				  <td>${noticelist.noticeno}</td>
-				  <td>${noticelist.title}</td>
-				  <td>${noticelist.name}</td>
-				  <td>${noticelist.content}</td>
-				  <td>${noticelist.datetime}</td>
-				  <td>${noticelist.n_type}</td>
+				  <td>${noticelist2.noticeno}</td>
+				  <td>${noticelist2.title}</td>
+				  <td>${noticelist2.name}</td>
+				  <td>${noticelist2.content}</td>
+				  <td>${noticelist2.datetime}</td>
+				  <td>${noticelist2.n_type}</td>
  			</tr>
 		</c:forEach>
    

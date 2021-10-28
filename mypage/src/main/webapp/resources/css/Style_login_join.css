@@ -1,0 +1,162 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style:none;
+    text-decoration:none;
+    border-collapse:collapse;
+    margin:0px;
+    padding:0px;
+    color:white;
+    background-color:rgb(20, 20, 20);
+}
+
+body {display:flex; justify-content:center; align-items:center;}
+
+.header{
+    display:flex;
+    width:1280px;
+    height:170px;
+    margin:auto;
+    margin-bottom: 130px;
+}
+
+.logo>a>img{
+    width:130px;
+    height:auto;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+.menubar{
+    width:calc(1280px- 170px);
+    height:150px; 
+}
+
+.upper_nav{
+    display:flex;
+    justify-content:flex-end;
+    width: 1110px;
+    height:20px;
+}
+.upper_nav>li{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.nav{
+    display:flex;
+    justify-content:flex-end;
+    line-height:140px;
+    font-size:23px;
+    width: 1110px;
+    height:140px;
+}
+.nav>li{
+    margin-left:30px;
+    margin-right:40px;
+}
+
+.content{
+    height: auto;
+    display:flex;
+    justify-content:center;
+}
+
+.loginBox, .joinBox{
+    justify-content:center;
+    align-items:center;
+    width:400px;
+    height:auto;
+    text-align: center;
+}
+.loginForm, .joinForm{
+    position: relative;
+    z-index:2;
+}
+h1{
+    font-size:32px;
+    text-align: center;
+}
+
+.joinForm> div{
+    position:relative;
+}
+
+.loginForm> div{
+    position:relative;
+}
+
+.joinForm>div>input{
+    width: 100%;
+    padding:35px 10px 10px;
+    background-color:rgba(255, 255, 255, 0.116);
+    border:none;
+    border-bottom: 1px solid rgb(206, 204, 204);
+    font-size:18px;
+    outline:none;
+}
+
+.loginForm>div>input{
+    width: 100%;
+    padding:35px 10px 10px;
+    background-color:rgba(255, 255, 255, 0.116);
+    border:none;
+    border-bottom: 1px solid rgb(206, 204, 204);
+    font-size:18px;
+    outline:none;
+}
+
+label{
+    position:absolute;
+    margin-bottom:10px;
+    left:10px; top:0px;
+    font-size:20px;
+    background-color:rgba(255, 255, 255, 0);
+}
+.btn-area{
+    margin-top:30px;
+    justify-content:center;
+    align-items:center;
+    vertical-align: text-top;
+}
+#btn{
+    width:30%;
+    height:40px;
+    background-color: rgb(245, 236, 235);
+    color:black;
+    font-size:15px;
+    border:none;
+    border-radius:10px;
+    padding:0px;
+    border-bottom:0;
+    outline:initial;
+}
+
+
+footer{
+    display:block;
+    bottom:0;
+    width:100%;
+    height:35px;
+    margin-top:30px;
+    text-align:center;
+    margin-top: 350px;
+}
+footer ul li{
+    width:150px;
+    display:inline;
+    list-style:none;
+    float:left;
+    line-height:30px;
+    vertical-align:middle;
+    text-align:center;
+    font-size:15px;
+}
+footer ul li a{
+    color:rgb(230, 228, 228);
+    font-weight:bold;
+    display:block;
+    font-size:13px;
+}
+footer ul li a:hover{
+    background-color:rgb(70, 70, 70);}
