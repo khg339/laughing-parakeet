@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cameldev.mypage.domain.NoticeDTO;
 import com.cameldev.mypage.domain.NoticeForm;
+import com.cameldev.mypage.domain.majorDTO;
 import com.cameldev.mypage.service.NotcieServiceImpl;
 import com.cameldev.mypage.service.NoticeService;
+import com.cameldev.mypage.service.majorService;
 
 
 @Controller
@@ -26,6 +28,7 @@ public class NoticeController {
 	
 	@Inject
 	NoticeService noticeservice;
+	
 	
 	@RequestMapping(value = "/noticeList", method=RequestMethod.GET)
 	public void getNoticeList(Model model) throws Exception{
@@ -39,6 +42,8 @@ public class NoticeController {
 		list=noticeservice.list2();
 		model.addAttribute("noticelist2",list);
 	}
+	
+	
 	
 	@RequestMapping(value="/noticeList/read/{noticeno}")
 	public String read(Model model,@PathVariable String noticeno) {

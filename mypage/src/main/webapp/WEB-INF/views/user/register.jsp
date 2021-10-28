@@ -22,11 +22,11 @@
                         <li><a href="/mypage/user/register">JOIN</a></li>
                     </ul>
                     <ul class="nav">
-                        <li><a href="#">학부소개</a></li>
+                        <li><a href="/mypage/major/majorList">학부소개</a></li>
                         <li><a href="/mypage/notice/noticeList">공지사항</a></li>
                         <li><a href="/mypage/notice/noticeList2">교수님공지</a></li>
-                        <li><a href="/mypage/lab/labMain">LAB</a></li>
-                        <li><a href="#">졸업논문</a></li>
+                        <li><a href="/mypage/lab/labList">LAB</a></li>
+                        <li><a href="/mypage/thesis/thesisList">졸업논문</a></li>
                     </ul>
                 </div>
             </div>
