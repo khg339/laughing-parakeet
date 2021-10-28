@@ -3,4 +3,6 @@
 >>>>>>>=de588127677b6709c5b80c4ca7e1f20ae69fd790
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/home.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/notice/noticeList2.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/user/login.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/user/register.jsp=UTF-8

@@ -2,6 +2,7 @@ package com.cameldev.mypage.service;
 
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.inject.Inject;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,22 @@ public class NotcieServiceImpl implements NoticeService {
 	@Override
 	public List<NoticeDTO>list()  throws Exception{
 		return noticeDAO.list();
+	}
+	@Override
+	public List<NoticeDTO>list2()  throws Exception{
+		return noticeDAO.list2();
+	}
+	@Override
+	public List<NoticeDTO>list3()  throws Exception{
+		return noticeDAO.list3();
+	}
+	@Override
+	public NoticeDTO read(String noticeno) {
+		return noticeDAO.select(noticeno);
+	}
+	@Override
+	public NoticeDTO read3(String noticeno) {
+		return noticeDAO.select(noticeno);
 	}
 
 }

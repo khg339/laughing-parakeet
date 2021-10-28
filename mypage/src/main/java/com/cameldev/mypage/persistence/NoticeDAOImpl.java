@@ -21,5 +21,19 @@ public class NoticeDAOImpl implements NoticeDAO {
 	public List<NoticeDTO> list() throws Exception {
 		return sql.selectList(namespace + ".noticelist");
 	}
+	@Override
+	public List<NoticeDTO> list2() throws Exception {
+		return sql.selectList(namespace + ".noticelist2");
+	}
+	@Override
+	public List<NoticeDTO> list3() throws Exception {
+		return sql.selectList(namespace + ".noticelist3");
+	}
+	
+	@Override
+	public NoticeDTO select(String noticeno) {
+		NoticeDTO dto=(NoticeDTO) sql.selectOne("select",noticeno);
+		return dto;
+	}
 
 }
