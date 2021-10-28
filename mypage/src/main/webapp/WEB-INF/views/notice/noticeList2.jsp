@@ -3,20 +3,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+   
         <meta charset="UTF-8">
         <title>교수님공지 > 전체보기</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_table.css">
+     <style>
+</style>
     </head>
     <body>
         <div id="page">
             <div class="header">
                 <div class="logo">
-                    <a href="Main.html"><img src=${pageContext.request.contextPath}/images/hsLogo.png"alt="한신대학교 컴퓨터공학부"></a>
+                    <a href="Main.html"><img src="${pageContext.request.contextPath}/images/hsLogo.png"alt="한신대학교 컴퓨터공학부"></a>
                 </div>
                 <div class="menubar">
                     <ul class="upper_nav">
-                        <li><a href="Main.html">HOME</a></li>
+                        <li><a href="/mypage/">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
                         <li><a href="Mypage_info.html">MYPAGE</a></li>
                     </ul>
@@ -33,7 +36,7 @@
                 <div id="nav_box">
                     <table id="nav_table" cellspacing="0" cellpadding="10">
                         <caption><b>교수님공지</b></caption>
-                        <tr><td><a href="News_Professor.html">전체보기</a></td></tr>
+                        <tr><td><a href="/mypage/notice/noticeList2">전체보기</a></td></tr>
                         <tr><td><a href="Pro_Na.html">나근식</a></td></tr>
                         <tr><td><a href="Pro_Kim.html">김성기</a></td></tr>
                         <tr><td><a href="Pro_Han.html">한근식</a></td></tr>
@@ -55,25 +58,26 @@
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>전체보기</b><br><br><br>
                         <table border="0">
                              <tr>
-            <td>공지번호</td>
-            <td>제목</td>
+            <!-- <td>공지번호</td> -->
+            <td id="title">제목</td>
             <td>작성자</td>
-            <td>내용</td>
+            <!-- <td>내용</td> -->
             <td>작성일</td>
-            <td>유형</td>
+            <!-- <td>유형</td> -->
             
         </tr>
         <c:forEach items="${noticelist2}" var="noticelist2">
  			<tr>
  				
-				  <td>${noticelist2.noticeno}</td>
+				  <%-- <td>${noticelist2.noticeno}</td> --%>
 				  <td>${noticelist2.title}</td>
 				  <td>${noticelist2.name}</td>
-				  <td>${noticelist2.content}</td>
+				  <%-- <td>${noticelist2.content}</td> --%>
 				  <td>${noticelist2.datetime}</td>
-				  <td>${noticelist2.n_type}</td>
+				 <%--  <td>${noticelist2.n_type}</td> --%>
  			</tr>
 		</c:forEach>
+						       
                         <br><br>
                     </div>
                 </div>
@@ -96,32 +100,6 @@
 </html>
 
 
-<table border=1>
-    
-        <tr>
-            <td>공지번호</td>
-            <td>제목</td>
-            <td>작성자</td>
-            <td>내용</td>
-            <td>작성일</td>
-            <td>유형</td>
-            
-        </tr>
-        <c:forEach items="${noticelist2}" var="noticelist2">
- 			<tr>
- 				
-				  <td>${noticelist2.noticeno}</td>
-				  <td>${noticelist2.title}</td>
-				  <td>${noticelist2.name}</td>
-				  <td>${noticelist2.content}</td>
-				  <td>${noticelist2.datetime}</td>
-				  <td>${noticelist2.n_type}</td>
- 			</tr>
-		</c:forEach>
-   
-</table>
-</body>
-</html>
 
  
  

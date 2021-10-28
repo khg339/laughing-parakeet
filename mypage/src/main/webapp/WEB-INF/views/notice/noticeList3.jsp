@@ -7,6 +7,7 @@
         <title>공지사항 > 취업공지사항</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_table.css">
+
 </head>
 <body>
 <div id="page">
@@ -16,7 +17,7 @@
                 </div>
                      <div class="menubar">
                      <ul class="upper_nav">
-                        <li><a href="Main.html">HOME</a></li>
+                        <li><a href="/mypage/">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
                         <li><a href="Mypage_info.html">MYPAGE</a></li>
                     </ul>

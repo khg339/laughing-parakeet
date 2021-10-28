@@ -16,7 +16,7 @@
                 </div>
                 <div class="menubar">
                     <ul class="upper_nav">
-                        <li><a href="Main.html">HOME</a></li>
+                        <li><a href="/mypage/">HOME</a></li>
                         <li><a href="#">SITEMAP</a></li>
                         <li><a href="/mypage/user/login">LOGIN</a></li>
                         <li><a href="/mypage/user/register">JOIN</a></li>
