@@ -33,6 +33,7 @@ create table Lab(
     intro char(80),
     represent_student char(40),
     address char(80),
+    point int,
     primary key (lab)
 );
 
