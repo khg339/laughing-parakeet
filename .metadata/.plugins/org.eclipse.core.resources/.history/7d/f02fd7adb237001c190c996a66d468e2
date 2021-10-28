@@ -1,0 +1,46 @@
+package com.cameldev.mypage.persistence;
+
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
+
+import com.cameldev.mypage.domain.NoticeVO;
+
+@Repository
+public class NoticeDAOImpl implements NoticeDAO {
+	
+	private static final String NAMESPACE = "com.cameldev.mypage.mappers.notice.NoticeMapper";
+	
+	private final SqlSession sqlSession;
+	
+	@Inject
+	public NoticeDAOImpl(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
+	
+	@Override
+	public void create(NoticeVO noticeVO) throws Exception{
+		sqlSession.insert(NAMESPACE + ".create", noticeVO);
+	}
+	
+	@Override
+	public NoticeVO read(Integer noticeno) throws Exception{
+		return sqlSession.selectOne(NAMESPACE + ".read" , noticeno);
+	}
+	
+	@Override
+	public void update(NoticeVO noticeVO) throws Exception{
+		sqlSession.update(NAMESPACE + ".update", noticeVO);
+	}
+	
+	@Override
+	public void delete(Integer noticeno) throws Exception{
+		sqlSession.delete(NAMESPACE + ".delete", noticeno);
+	}
+	
+	@Override
+	public List<NoticeVO> listAll() throws Exception{
+		return sqlSession.selectList(NAMESPACE + ".listAll");
+	}
+}

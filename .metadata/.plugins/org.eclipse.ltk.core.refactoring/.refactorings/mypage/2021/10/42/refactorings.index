@@ -1,0 +1,12 @@
+1633953925671	Encapsulate field 'noticeno'
+1633953937351	Encapsulate field 'title'
+1633953944292	Encapsulate field 'name'
+1633953950651	Encapsulate field 'content'
+1633953955566	Encapsulate field 'datetime'
+1633953960183	Encapsulate field 'n_type'
+1633954401741	Rename type 'ArticleVO'
+1633954431944	Rename compilation unit 'ArticleDAO.java'
+1633954447144	Rename type 'ArticleDAOImpl'
+1633954926151	Delete element
+1634186034650	Delete element
+1634186039313	Delete element

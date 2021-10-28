@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,9 +41,9 @@
 <script>
    var msg="${msg}";
    if(msg== "REGISTERED"){
-      alert("ȸ�������� �Ϸ�Ǿ����ϴ�. �α������ּ���");
+      alert("회원가입이 완료되었습니다. 로그인해주세요");
    }else if(msg=="FALURE"){
-      alert("���̵�� ��й�ȣ�� Ȯ�����ּ���");
+      alert("아이디와 비밀번호를 확인해주세요");
    }
    $(function(){
       $('input').iCheck({

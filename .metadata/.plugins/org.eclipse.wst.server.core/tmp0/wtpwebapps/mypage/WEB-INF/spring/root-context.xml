@@ -25,5 +25,7 @@
 		
 
 		<context:component-scan base-package="com.cameldev.mypage"/>
+		<context:component-scan base-package="com.cameldev.mypage.persistence"/>
+		<context:component-scan base-package="com.cameldev.mypage.service"/>
 		
 </beans>
