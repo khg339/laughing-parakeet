@@ -37,41 +37,48 @@
                 <div id="nav_box">
                     <table id="nav_table" cellspacing="0" cellpadding="10">
                         <caption><b>LAB</b></caption>
-                        <tr><td><a href="Lab.html">LAB 순위</a></td></tr>
-                        <tr><td><a href="Lab_AI.html">AI 연구부</a></td></tr>
-                        <tr><td><a href="Lab_BigData.html">BigData 연구부</a></td></tr>
-                        <tr><td><a href="Lab_IoT.html">IoT 연구부</a></td></tr>
-                        <tr><td><a href="LAb_SW.html">SW 연구부</a></td></tr>
-                        <tr><td><a href="LAb_SW.html">XR 연구부</a></td></tr>
-                        <tr><td><a href="${path}/mypage/lab/apply">연구실 신청</a></td></tr>
+                        <tr><td><a href="/mypage/lab/labList">LAB 소개</a></td></tr>
+                        <tr><td><a href="/mypage/lab/labrank">LAB 순위</a></td></tr>
+                        <%-- <c:forEach items="${lablist}" var="lablist">
+                        
+                        <tr><td><a href="Lab_AI.html">${lablist.lab} </a></td></tr>
+                        
+                        
+                        </c:forEach> --%>
+                        <tr><td><a href="${path}/mypage/lab/apply">LAB 신청</a></td></tr>
                     </table>
                 </div>
             <div id="content_box">
-                    <div><h2>연구실 소개</h2><br><br>
+                    <div><h2>LAB 소개</h2><br><br>
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png"class="tri_icon"><b>전체보기</b><br><br><br>                  
                         <c:forEach items="${lablist}" var="lablist">
-                        <div id="content_box2">
-                            <div id="lab_box">
+                        <div id="content_box2">                        
+                            <!-- <div id="lab_box">    -->         
+                                
+                               <!--  <div id="lab_table"> -->
                                 <div id="lab_img"><img src="${pageContext.request.contextPath}/images/${lablist.url}" width="200px" height="200px">
-                            </div>
-                            <div id="lab_table">
                                 <table border="0">
-			                            <tr><th>연구실</th><td>${lablist.lab}</td></tr>
-							            <tr><th>연구실 담당교수님</th><td>${lablist.professor}</td></tr>
-							            <tr><th>연구실소개</th><td id="title">${lablist.intro}</td></tr>
-							            <tr><th>연구실 대표 학생</th><td>${lablist.represent_student}</td></tr>
-							            <tr><th>연구실 주소</th><td>${lablist.address}</td></tr>
-							            <tr><th>연구실 포인트</th><td>${lablist.point}</td></tr>								 
-										</c:forEach>
-                                </table><br><br><br><br>
+			                            <tr><th>LAB</th><td>${lablist.lab}</td></tr>
+							            <tr><th>LAB 담당교수님</th><td>${lablist.professor}</td></tr>
+							            <tr><th>LAB 소개</th><td id="title">${lablist.intro}</td></tr>
+							            <tr><th>LAB 대표 학생</th><td>${lablist.represent_student}</td></tr>
+							            <tr><th>LAB 주소</th><td>${lablist.address}</td></tr>
+							            <tr><th>LAB POINT</th><td>${lablist.point}</td></tr>								 
+										
+                                </table>
+                                </c:forEach>
+                            </div>
+                            
+                            
+                                <br><br><br><br>
                             </div>
                         </div>
                         
                         
                                 
-                               <form action="${path}/mypage/lab/apply">
+                              <%--  <form action="${path}/mypage/lab/apply">
 							<button>랩실 신청</button>
-</form> 
+</form>  --%>
                             </div>
                             <br><br>
                         </div>
@@ -92,12 +99,12 @@
                     <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
             </footer>
         </div>
-<script>
+<!-- <script>
 var msg="${msg}";
 if(msg== "APPLYED"){
    alert("랩실 신청이 완료되었습니다.");
 }
 </script>
-
+ -->
 </body>
 </html>

@@ -22,6 +22,7 @@
                     <ul class="upper_nav">
                         <li><a href="/mypage/lab/home">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
+                       
                         <li><a href="/mypage/user/login">LOGIN</a></li>
                         <li><a href="/mypage/user/register">JOIN</a></li>
                     </ul>

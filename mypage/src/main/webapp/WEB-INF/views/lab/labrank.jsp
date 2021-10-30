@@ -6,7 +6,10 @@
         <meta charset="UTF-8">
         <title>공지사항 > 학부공지사항</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_content.css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_table.css">
+        <style>#content_box table{width:750px;text-align:center;}
+        #lab_box{display:flex;justify-content:center;align-items:center;margin-right: 20px;}
+        #content_box2{display: block;}</style>
     </head>
     <body>
         <div id="page">
@@ -33,35 +36,41 @@
             <div class="content">
                 <div id="nav_box">
                     <table id="nav_table" cellspacing="0" cellpadding="10">
-                        <caption><b>공지사항</b></caption>
-                        <tr><td><a href="/mypage/notice/noticeList">학부 공지사항</a></td></tr>
-                        <tr><td><a href="/mypage/notice/noticeList3">취업 공지사항</a></td></tr>
+                        <caption><b>LAB</b></caption>
+                        <tr><td><a href="/mypage/lab/labList">LAB 소개</a></td></tr>
+                        <tr><td><a href="/mypage/lab/labrank">LAB 순위</a></td></tr>
+                        <tr><td><a href="${path}/mypage/lab/apply">LAB 신청</a></td></tr>
                     </table>
                 </div>
-                <div id="content_box">
-                    <div id="content1"><h2>공지사항</h2><br><br>
-                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>${noticeDTO.title}</b><br><br><hr><br>
-                        <div>
-                            <table>
-							<tr>
-								<th><td align="right"><small>${noticeDTO.datetime}</small>&nbsp;&nbsp;${noticeDTO.name}<br><br><br></td>
-								
-							</tr>
-							<tr>
-								<td>${noticeDTO.content}</td>
-							</tr>	
-						</table>
+            <div id="content_box">
+                    <div><h2>이번학기 LAB Ranking </h2><br><br>
+                        <img src="${pageContext.request.contextPath}/images/tri_icon.png"class="tri_icon"><b>전체보기</b><br><br><br>                  
+                        <c:forEach items="${lablist}" var="lablist">
+                        <div id="content_box2">
+                            <div id="lab_box">
+                                <div id="lab_img"><img src="${pageContext.request.contextPath}/images/${lablist.url}" width="200px" height="200px">
+                            </div>
+                            <%-- <div id="lab_table">
+                                <table border="0">
+			                            <tr><th>연구실</th><td>${lablist.lab}</td></tr>
+							            <tr><th>연구실 담당교수님</th><td>${lablist.professor}</td></tr>
+							            <tr><th>연구실소개</th><td id="title">${lablist.intro}</td></tr>
+							            <tr><th>연구실 대표 학생</th><td>${lablist.represent_student}</td></tr>
+							            <tr><th>연구실 주소</th><td>${lablist.address}</td></tr>
+							            <tr><th>연구실 포인트</th><td>${lablist.point}</td></tr>								 
+										
+                                </table><br><br><br><br>
+                            </div> --%>
+                            </c:forEach>
                         </div>
-                    </div>
-                    <hr><br>
-                    <div id="content2">
-                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>댓글</b><br><br>
-                        <div>
-                            <table>
-                                <tr><th id="comment">작성자이름</th><td>오 정말 좋은 생각이에요 굳굳굳ㄱㄷ </td></tr>
-                                <tr><th id="comment">작성자이름</th><td>음 저는 잘모르겠네요 음으믕ㅁㅇ하하 음 저는 잘모르겠네요 하하음 저는 잘모르겠네요 음으믕ㅁㅇ하하</td></tr>
-                                <tr><th id="comment">작성자이름</th><td>반대합니다!</td></tr>
-                            </table>
+                        
+                        
+                                
+                            <%--    <form action="${path}/mypage/lab/apply">
+							<button>랩실 신청</button>
+</form>  --%>
+                            </div>
+                            <br><br>
                         </div>
                     </div>
                 </div>
@@ -80,6 +89,12 @@
                     <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
             </footer>
         </div>
-
+<!-- <script>
+var msg="${msg}";
+if(msg== "APPLYED"){
+   alert("랩실 신청이 완료되었습니다.");
+}
+</script>
+ -->
 </body>
 </html>

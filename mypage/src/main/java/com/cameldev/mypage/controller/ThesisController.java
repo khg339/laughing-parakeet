@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,11 +22,17 @@ import com.cameldev.mypage.service.majorService;
 public class ThesisController {
 	@Inject
 	ThesisService thesisservice;
+	
 	@RequestMapping(value = "/thesisList", method=RequestMethod.GET)
 	public void getThesisList(Model model) throws Exception{
 		List<ThesisDTO>list=null;
 		list=thesisservice.list();
 		model.addAttribute("thesislist",list);
+	}
+	@RequestMapping(value="/thesisList/thesisread/{thesisno}")
+	public String read(Model model,@PathVariable String thesisno) {
+		model.addAttribute("ThesisDTO",thesisservice.read(thesisno));
+		return "/thesis/thesisread";
 	}
 
 }

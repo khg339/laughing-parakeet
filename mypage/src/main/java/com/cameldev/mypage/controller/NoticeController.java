@@ -59,7 +59,7 @@ public class NoticeController {
 	@RequestMapping(value="/noticeList2/read2/{noticeno}")
 	public String read2(Model model,@PathVariable String noticeno) {
 		model.addAttribute("noticeDTO",noticeservice.read2(noticeno));
-		return "/notice/read";
+		return "/notice/read2";
 	}
 	
 	@RequestMapping(value="/noticeList3/read3/{noticeno}")

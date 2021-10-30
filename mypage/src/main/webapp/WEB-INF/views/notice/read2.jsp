@@ -3,26 +3,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-   
         <meta charset="UTF-8">
-        <title>교수님공지 > 전체보기</title>
+        <title>공지사항 > 학부공지사항</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_table.css">
-     <style>
-</style>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_content.css">
     </head>
     <body>
         <div id="page">
             <div class="header">
                 <div class="logo">
-                    <a href="/mypage/lab/home"><img src="${pageContext.request.contextPath}/images/hsLogo.png"alt="한신대학교 컴퓨터공학부"></a>
+                    <a href="/mypage/lab/home"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
                 </div>
                 <div class="menubar">
-                    <ul class="upper_nav">
+                     <ul class="upper_nav">
                         <li><a href="/mypage/lab/home">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
                         <li><a href="/mypage/user/my">MYPAGE</a></li>
                     </ul>
+
                     <ul class="nav">
                         <li><a href="/mypage/major/majorList">학부소개</a></li>
                         <li><a href="/mypage/notice/noticeList">공지사항</a></li>
@@ -33,8 +31,8 @@
                 </div>
             </div>
             <div class="content">
-                 <div id="nav_box">
-                    <table id="nav_table" cellspacing="0" cellpadding="10">
+                <div id="nav_box">
+                     <table id="nav_table" cellspacing="0" cellpadding="10">
                         <caption><b>교수님공지</b></caption>
                         <tr><td><a href="/mypage/notice/noticeList2">전체보기</a></td></tr>
                         <tr><td><a href="Pro_Na.html">나근식</a></td></tr>
@@ -52,25 +50,32 @@
                         <tr><td><a href="Pro_Jo.html">조재춘</a></td></tr>
                         <tr><td><a href="Pro_LeeY.html">이양선</a></td></tr>
                     </table>
-                </div> 
+                </div>
                 <div id="content_box">
-                    <div id="content1"><h2>교수님공지</h2><br><br>
-                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>전체보기</b><br><br><br>
-                        <table border="0">
-                             <tr>
-					            <td id="title">제목</td>
-					            <td>작성자</td>
-					            <td>작성일</td>  
-					        </tr>
-					        <c:forEach items="${noticelist2}" var="noticelist2">
-					 			<tr>
-									  <td><a href="/mypage/notice/noticeList2/read2/${noticelist2.noticeno}">${noticelist2.title}</td>
-									  <td>${noticelist2.name}</td>
-									  <td>${noticelist2.datetime}</td>
-					 			</tr>
-							</c:forEach>
-						       
-                        <br><br>
+                    <div id="content1"><h2>공지사항</h2><br><br>
+                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>${noticeDTO.title}</b><br><br><hr><br>
+                        <div>
+                            <table>
+							<tr>
+								<th><td align="right"><small>${noticeDTO.datetime}</small>&nbsp;&nbsp;${noticeDTO.name}<br><br><br></td>
+								
+							</tr>
+							<tr>
+								<td>${noticeDTO.content}</td>
+							</tr>	
+						</table>
+                        </div>
+                    </div>
+                    <hr><br>
+                    <div id="content2">
+                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>댓글</b><br><br>
+                        <div>
+                            <table>
+                                <tr><th id="comment">작성자이름</th><td>오 정말 좋은 생각이에요 굳굳굳ㄱㄷ </td></tr>
+                                <tr><th id="comment">작성자이름</th><td>음 저는 잘모르겠네요 음으믕ㅁㅇ하하 음 저는 잘모르겠네요 하하음 저는 잘모르겠네요 음으믕ㅁㅇ하하</td></tr>
+                                <tr><th id="comment">작성자이름</th><td>반대합니다!</td></tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,13 +92,7 @@
                     <li><a href="http://sugang.hs.ac.kr/login">수강신청</a></li>
                     <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
             </footer>
-        
-    </body>
+        </div>
+
+</body>
 </html>
-
-
-
- 
- 
- 		
-

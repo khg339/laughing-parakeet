@@ -21,5 +21,10 @@ public class ThesisDAOImpl implements ThesisDAO{
 	public List<ThesisDTO> list() throws Exception {
 		return sql.selectList(namespace + ".thesislist");
 	}
+	@Override
+	public ThesisDTO thesisselect(String thesisno) {
+		ThesisDTO dto=(ThesisDTO) sql.selectOne("thesisselect",thesisno);
+		return dto;
+	}
 
 }

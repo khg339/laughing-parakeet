@@ -34,7 +34,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 		
 			logger.info("new login success"); 
 			httpSession.setAttribute(LOGIN, userVO); 
-			response.sendRedirect("/mypage"); 
+			response.sendRedirect("/mypage/"); 
 		}
 
 		

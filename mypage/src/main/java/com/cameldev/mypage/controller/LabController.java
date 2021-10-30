@@ -39,6 +39,13 @@ public class LabController {
 		model.addAttribute("lablist2",list);
 	}
 	
+	@RequestMapping(value = "/labrank", method=RequestMethod.GET)
+	public void getLabRank(Model model) throws Exception{
+		List<LabDTO2>list=null;
+		list=labservice.list();
+		model.addAttribute("lablist",list);
+	}
+	
 	
 	
 }

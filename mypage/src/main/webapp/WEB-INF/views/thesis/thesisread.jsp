@@ -4,29 +4,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>한신대학교 컴퓨터공학부</title>
+        <title>공지사항 > 학부공지사항</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_main.css">
-        <style>
-            h4{background-color: rgb(238, 234, 234); color: black; margin-top: 0;}
-            #first{font-size:large; color:rgb(243, 38, 38)}
-        </style>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_content.css">
     </head>
     <body>
         <div id="page">
             <div class="header">
                 <div class="logo">
-                    <a href="/mypage/lab/home"><img src="${pageContext.request.contextPath}/images/hsLogo.png"alt="한신대학교 컴퓨터공학부" alt="한신대학교 컴퓨터공학부"></a>
+                    <a href="/mypage/lab/home"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
                 </div>
                 <div class="menubar">
                      <ul class="upper_nav">
                         <li><a href="/mypage/lab/home">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
-                        
-                        <li><a href="/mypage/user/login">LOGIN</a></li>
-                        <li><a href="/mypage/user/register">JOIN</a></li>
+                        <li><a href="/mypage/user/my">MYPAGE</a></li>
                     </ul>
-                     <ul class="nav">
+
+                    <ul class="nav">
                         <li><a href="/mypage/major/majorList">학부소개</a></li>
                         <li><a href="/mypage/notice/noticeList">공지사항</a></li>
                         <li><a href="/mypage/notice/noticeList2">교수님공지</a></li>
@@ -36,29 +31,34 @@
                 </div>
             </div>
             <div class="content">
-                <div><img class="move1" src="${pageContext.request.contextPath}/images/hanshin.png" width="320" height="65"></div>
-                <div><img class="move2" src="${pageContext.request.contextPath}/images/computer.png"width="auto" height="62"></div>
-                <div><img class="move1" src="${pageContext.request.contextPath}/images/engineering.png"width="auto" height="70"></div>
-                <div class="scroll"><img src="${pageContext.request.contextPath}/images/scroll.png" width="40" height="40"></div>
-                <div class="labRanking1">
-                    <img src="${pageContext.request.contextPath}/images/labRanking.png" width="300" height="auto">
-                    
-                    <c:forEach items="${lablist2}" var="lablist2">
-                    <div class="labRanking2">
-                    <div id="otherLabs">
-                            <div id="lab">
-                                <img src="${pageContext.request.contextPath}/images/${lablist2.url}"><br>
-                                 <h4 >top 5</h4><br> 
-                                ${lablist2.lab}<Br>
-                                POINT : ${lablist2.point} <br>
-                            
-                        
-                        </div>
-                       </c:forEach>
-                        
+                <div id="nav_box">
+                    <table id="nav_table" cellspacing="0" cellpadding="10">
+                        <caption><b>졸업논문</b></caption>
+                        <tr><td><a href="/mypage/thesis/thesisList">전체보기</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2021년도</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2020년도</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2019년도</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2018년도</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2017년도</a></td></tr>
+                    </table>
+                </div>
+                <div id="content_box">
+                    <div id="content1"><h2>졸업논문</h2><br><br>
+                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>${ThesisDTO.title}</b><br><br><hr><br>
+                        <div>
+                            <table>
+							<tr>
+								<th><td align="right"><small>${ThesisDTO.datetime}</small>&nbsp;&nbsp;${ThesisDTO.memberno}<br><br><br></td>
+								
+							</tr>
+							<tr>
+								<td>${ThesisDTO.content}</td>
+							</tr>	
+						</table>
                         </div>
                     </div>
-                </div>
+                    <hr><br>
+               
                 </div>
             </div>
             <footer>
@@ -75,5 +75,6 @@
                     <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
             </footer>
         </div>
-    </body>
+
+</body>
 </html>

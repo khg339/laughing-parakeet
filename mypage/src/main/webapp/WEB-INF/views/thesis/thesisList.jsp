@@ -60,7 +60,7 @@
 				        <c:forEach items="${thesislist}" var="thesislist">
 				 			<tr>
 								  <td>${thesislist.thesisno}</td>
-								  <td>${thesislist.title}</td>
+								  <td><a href="/mypage/thesis/thesisList/thesisread/${thesislist.thesisno}">${thesislist.title}</a></td>
 								  <td>${thesislist.memberno}</td>  
 								  <td>${thesislist.datetime}</td>
 								  <td><img src="${pageContext.request.contextPath}/images/plus_icon.png" class="plus_icon"></td>
