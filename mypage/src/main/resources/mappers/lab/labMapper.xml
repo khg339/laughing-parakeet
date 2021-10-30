@@ -4,10 +4,16 @@
 <mapper namespace="com.cameldev.mypage.lab.labMapper">
  
     <select id="lablist" resultType="com.cameldev.mypage.domain.LabDTO2">
-        SELECT *
+        SELECT url,lab, professor, intro, represent_student, address,point
 		FROM computer_engineering.lab
 		order by point desc
-		
+    </select>
+   
+    <select id="lablist2" resultType="com.cameldev.mypage.domain.LabDTO2">
+        SELECT url,lab, professor, intro, represent_student, address,point
+		FROM computer_engineering.lab
+		order by point desc
+		limit 5
     </select>
     
     </mapper>

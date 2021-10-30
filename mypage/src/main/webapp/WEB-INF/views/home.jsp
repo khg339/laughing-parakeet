@@ -41,15 +41,18 @@
                 <div class="scroll"><img src="${pageContext.request.contextPath}/images/scroll.png" width="40" height="40"></div>
                 <div class="labRanking1">
                     <img src="${pageContext.request.contextPath}/images/labRanking.png" width="300" height="auto">
+                    
+                    <c:forEach items="${lablist}" var="lablist"><div id="firstLab">
                     <div class="labRanking2">
-                        <div id="firstLab">
+                    
                             <div id="lab">
-                                <img src="${pageContext.request.contextPath}/images/bigdata.png"><br>
+                                <img src="${pageContext.request.contextPath}/images/${lablist.url}"><br>
                                 <h4 id="first">1</h4><br>
-                                연구실 이름<Br>
-                                POINT : 0000<br>
+                                ${lablist.lab}<Br>
+                                POINT : ${lablist.point} <br>
                             </div>
-                        </div>
+                        </div></c:forEach>
+                        
                         <div id="otherLabs">
                             <div id="lab">
                                 <img src="${pageContext.request.contextPath}/images/xr.png"><br>

@@ -22,7 +22,8 @@
                     <ul class="upper_nav">
                         <li><a href="/mypage/lab/home">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
-                        <li><a href="/mypage/notice/my">MYPAGE</a></li>
+                        <li><a href="/mypage/user/login">LOGIN</a></li>
+                        <li><a href="/mypage/user/register">JOIN</a></li>
                     </ul>
                      <ul class="nav">
                         <li><a href="/mypage/major/majorList">학부소개</a></li>
@@ -40,40 +41,20 @@
                 <div class="scroll"><img src="${pageContext.request.contextPath}/images/scroll.png" width="40" height="40"></div>
                 <div class="labRanking1">
                     <img src="${pageContext.request.contextPath}/images/labRanking.png" width="300" height="auto">
+                    
+                    <c:forEach items="${lablist2}" var="lablist2">
                     <div class="labRanking2">
-                        <div id="firstLab">
+                    <div id="otherLabs">
                             <div id="lab">
-                                <img src="${pageContext.request.contextPath}/images/bigdata.png"><br>
-                                <h4 id="first">1</h4><br>
-                                연구실 이름<Br>
-                                POINT : 0000<br>
-                            </div>
+                                <img src="${pageContext.request.contextPath}/images/${lablist2.url}"><br>
+                                 <h4 >top 5</h4><br> 
+                                ${lablist2.lab}<Br>
+                                POINT : ${lablist2.point} <br>
+                            
+                        
                         </div>
-                        <div id="otherLabs">
-                            <div id="lab">
-                                <img src="${pageContext.request.contextPath}/images/xr.png"><br>
-                                <h4>2</h4><br>
-                                연구실 이름<Br>
-                                POINT : 0000<br>
-                            </div>
-                            <div id="lab">
-                                <img src="${pageContext.request.contextPath}/images/iot.png"><br>
-                                <h4>3</h4><br>
-                                연구실 이름<Br>
-                                POINT : 0000<br>
-                            </div>
-                            <div id="lab">
-                                <img src="${pageContext.request.contextPath}/images/ai.png"><br>
-                                <h4>4</h4><br>
-                                연구실 이름<Br>
-                                POINT : 0000<br>
-                            </div>
-                            <div id="lab">
-                                <img src="${pageContext.request.contextPath}/images/sw.png"><br>
-                                <h4>5</h4><br>
-                                연구실 이름<Br>
-                                POINT : 0000<br>
-                            </div>
+                       </c:forEach>
+                        
                         </div>
                     </div>
                 </div>

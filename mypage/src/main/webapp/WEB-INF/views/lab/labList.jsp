@@ -15,11 +15,11 @@
         <div id="page">
             <div class="header">
                 <div class="logo">
-                    <a href="/mypage/"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
+                    <a href="/mypage/lab/home"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
                 </div>
                 <div class="menubar">
                      <ul class="upper_nav">
-                        <li><a href="/mypage/">HOME</a></li>
+                        <li><a href="/mypage/lab/home">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
                         <li><a href="/mypage/user/my">MYPAGE</a></li>
                     </ul>
@@ -48,31 +48,20 @@
                 </div>
             <div id="content_box">
                     <div><h2>연구실 소개</h2><br><br>
-                        <img src="${pageContext.request.contextPath}/images/tri_icon.png"class="tri_icon"><b>전체보기</b><br><br><br>
+                        <img src="${pageContext.request.contextPath}/images/tri_icon.png"class="tri_icon"><b>전체보기</b><br><br><br>                  
+                        <c:forEach items="${lablist}" var="lablist">
                         <div id="content_box2">
                             <div id="lab_box">
-                                <div id="lab_img"><img src="media/se_logo.jpg" width="200px" height="200px">
+                                <div id="lab_img"><img src="${pageContext.request.contextPath}/images/${lablist.url}" width="200px" height="200px">
                             </div>
                             <div id="lab_table">
                                 <table border="0">
-			                            <tr>
-							            <td>연구실</td>
-							            <td>연구실 담당교수님</td>
-							            <td>연구실소개</td>
-							            <td>연구실 대표 학생</td>
-							            <td>연구실 주소</td>
-							            <td>연구실 포인트</td>
-							        	</tr>
-								        <c:forEach items="${lablist}" var="lablist">
-								 			<tr>
-								 				
-												  <td>${lablist.lab}</td>
-												  <td>${lablist.professor}</td>
-												  <td>${lablist.intro}</td>
-												  <td>${lablist.represent_student}</td>
-												  <td>${lablist.address}</td>
-												  <td>${lablist.point}</td>
-								 			</tr>
+			                            <tr><th>연구실</th><td>${lablist.lab}</td></tr>
+							            <tr><th>연구실 담당교수님</th><td>${lablist.professor}</td></tr>
+							            <tr><th>연구실소개</th><td id="title">${lablist.intro}</td></tr>
+							            <tr><th>연구실 대표 학생</th><td>${lablist.represent_student}</td></tr>
+							            <tr><th>연구실 주소</th><td>${lablist.address}</td></tr>
+							            <tr><th>연구실 포인트</th><td>${lablist.point}</td></tr>								 
 										</c:forEach>
                                 </table><br><br><br><br>
                             </div>

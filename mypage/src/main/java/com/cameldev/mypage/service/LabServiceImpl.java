@@ -17,5 +17,9 @@ public class LabServiceImpl implements LabService{
 	public List<LabDTO2>list() throws Exception{
 		return labDAO.list();
 	}
+	@Override
+	public List<LabDTO2>list2() throws Exception{
+		return labDAO.list2();
+	}
 
 }

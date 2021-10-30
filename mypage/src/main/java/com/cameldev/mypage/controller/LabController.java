@@ -24,12 +24,21 @@ import com.cameldev.mypage.service.majorService;
 public class LabController {
 	@Inject
 	LabService labservice;
+	
 	@RequestMapping(value = "/labList", method=RequestMethod.GET)
 	public void getLabList(Model model) throws Exception{
 		List<LabDTO2>list=null;
 		list=labservice.list();
 		model.addAttribute("lablist",list);
 	}
+	
+	@RequestMapping(value = "/home", method=RequestMethod.GET)
+	public void getLabList2(Model model) throws Exception{
+		List<LabDTO2>list=null;
+		list=labservice.list2();
+		model.addAttribute("lablist2",list);
+	}
+	
 	
 	
 }

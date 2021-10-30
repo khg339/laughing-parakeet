@@ -34,6 +34,7 @@ create table Lab(
     represent_student char(40),
     address char(80),
     point int,
+url char(100),
     primary key (lab)
 );
 
