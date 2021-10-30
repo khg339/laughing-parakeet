@@ -59,10 +59,10 @@
                 </div>
                 <div id="content_box">
                     <div id="content1"><h2>공지사항</h2><br><br>
-                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>${noticeDTO.title}</b><br><br><hr><br>
+                        <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>${noticeDTO.title}</b><br><br>
                         <form role="form" method="post"> 
         <input type="hidden" name="noticeno" value="${noticeDTO.noticeno} "> 
-        </form><button type="submit" id="addBtn">즐겨찾기</button>
+        </form><button align="right" type="submit" id="addBtn"><img src="${pageContext.request.contextPath}/images/plus_icon.png" class="plus_icon"></button><hr><br>
                         
                         <div>
                             <table>
