@@ -43,33 +43,42 @@
                         <tr><td><a href="Lab_IoT.html">IoT 연구부</a></td></tr>
                         <tr><td><a href="LAb_SW.html">SW 연구부</a></td></tr>
                         <tr><td><a href="LAb_SW.html">XR 연구부</a></td></tr>
+                        <tr><td><a href="${path}/mypage/lab/apply">연구실 신청</a></td></tr>
                     </table>
                 </div>
             <div id="content_box">
                     <div><h2>연구실 소개</h2><br><br>
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png"class="tri_icon"><b>전체보기</b><br><br><br>
-                        <table border="0">
-                            <tr>
-            <td>연구실</td>
-            <td>연구실 담당교수님</td>
-            <td>연구실소개</td>
-            <td>연구실 대표 학생</td>
-            <td>연구실 주소</td>
-            <td>연구실 포인트</td>
-            
-        </tr>
-        <c:forEach items="${lablist}" var="lablist">
- 			<tr>
- 				
-				  <td>${lablist.lab}</td>
-				  <td>${lablist.professor}</td>
-				  <td>${lablist.intro}</td>
-				  <td>${lablist.represent_student}</td>
-				  <td>${lablist.address}</td>
-				  <td>${lablist.point}</td>
- 			</tr>
-		</c:forEach>
-                                </table>
+                        <div id="content_box2">
+                            <div id="lab_box">
+                                <div id="lab_img"><img src="media/se_logo.jpg" width="200px" height="200px">
+                            </div>
+                            <div id="lab_table">
+                                <table border="0">
+			                            <tr>
+							            <td>연구실</td>
+							            <td>연구실 담당교수님</td>
+							            <td>연구실소개</td>
+							            <td>연구실 대표 학생</td>
+							            <td>연구실 주소</td>
+							            <td>연구실 포인트</td>
+							        	</tr>
+								        <c:forEach items="${lablist}" var="lablist">
+								 			<tr>
+								 				
+												  <td>${lablist.lab}</td>
+												  <td>${lablist.professor}</td>
+												  <td>${lablist.intro}</td>
+												  <td>${lablist.represent_student}</td>
+												  <td>${lablist.address}</td>
+												  <td>${lablist.point}</td>
+								 			</tr>
+										</c:forEach>
+                                </table><br><br><br><br>
+                            </div>
+                        </div>
+                        
+                        
                                 
                                <form action="${path}/mypage/lab/apply">
 							<button>랩실 신청</button>

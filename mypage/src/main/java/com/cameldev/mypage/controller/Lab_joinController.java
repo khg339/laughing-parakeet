@@ -29,13 +29,13 @@ public class Lab_joinController {
 	}
 	
 	//랩실 신청 처리
-	@RequestMapping(value = "/apply", method = RequestMethod.POST)
+	@RequestMapping(value = "/labPost", method = RequestMethod.POST)
 	public String applyPOST(Lab_joinVO lab_joinVO, RedirectAttributes redirectAttributes) throws Exception {
 		
 		lab_joinService.apply(lab_joinVO);
 		redirectAttributes.addFlashAttribute("msg", "APPLYED");
 
-		return "redirect:/lab/labMain";
+		return "redirect:/lab/labList";
 
 	}
 	

@@ -6,7 +6,7 @@
 <title>apply page</title>
 </head>
 <body>
- <form action="${path}/mypage/lab/apply" method="post">
+ <form action="${path}/mypage/lab/labPost" method="post">
 
 <div class="input-group mb-3">
       <input type="text" name="memberno" class="form-control" placeholder="memberno">
@@ -34,6 +34,7 @@
    </div>
    
    <div class="col-4">
+   		
          <button type="submit" class="btn btn-primary btn-block">Apply</button>
       </div>
    

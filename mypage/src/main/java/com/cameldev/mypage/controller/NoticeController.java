@@ -56,6 +56,11 @@ public class NoticeController {
 		model.addAttribute("noticeDTO",noticeservice.read(noticeno));
 		return "/notice/read";
 	}
+	@RequestMapping(value="/noticeList2/read2/{noticeno}")
+	public String read2(Model model,@PathVariable String noticeno) {
+		model.addAttribute("noticeDTO",noticeservice.read2(noticeno));
+		return "/notice/read";
+	}
 	
 	@RequestMapping(value="/noticeList3/read3/{noticeno}")
 	public String read3(Model model,@PathVariable String noticeno) {

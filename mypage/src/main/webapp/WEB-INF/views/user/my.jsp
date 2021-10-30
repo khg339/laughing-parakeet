@@ -40,9 +40,10 @@
                         <caption><b>MYPAGE</b></caption>
                         <tr><td><a href="my">MY 정보</a></td></tr>
                         <tr><td><a href="star">즐겨찾기 목록</a></td></tr>
+                        <tr><td><a href="/mypage/lab/state">연구실 지원</a></td></tr>
                     </table>
                 </div>
-<div id="content_box">
+				<div id="content_box">
                     <div><h2>MYPAGE</h2><br><br>
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>MY 정보</b><br><br><br>
                         <table border="0">

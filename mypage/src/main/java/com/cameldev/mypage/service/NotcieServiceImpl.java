@@ -34,6 +34,10 @@ public class NotcieServiceImpl implements NoticeService {
 		return noticeDAO.select(noticeno);
 	}
 	@Override
+	public NoticeDTO read2(String noticeno) {
+		return noticeDAO.select(noticeno);
+	}
+	@Override
 	public NoticeDTO read3(String noticeno) {
 		return noticeDAO.select(noticeno);
 	}

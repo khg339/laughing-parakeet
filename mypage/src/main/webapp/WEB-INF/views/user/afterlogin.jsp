@@ -22,8 +22,7 @@
                     <ul class="upper_nav">
                         <li><a href="/mypage/">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
-                        <li><a href="/mypage/user/login">LOGIN</a></li>
-                        <li><a href="/mypage/user/register">JOIN</a></li>
+                        <li><a href="/mypage/notice/my">MYPAGE</a></li>
                     </ul>
                      <ul class="nav">
                         <li><a href="/mypage/major/majorList">학부소개</a></li>
