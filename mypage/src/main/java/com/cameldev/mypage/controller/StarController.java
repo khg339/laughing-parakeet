@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cameldev.mypage.domain.LoginDTO;
+import com.cameldev.mypage.domain.StarVO;
 import com.cameldev.mypage.domain.UserVO;
 import com.cameldev.mypage.service.StarService;
 import com.cameldev.mypage.service.UserService;
@@ -70,6 +71,8 @@ public class StarController {
 		}
 		
 	}
+	
+	
 	
 	
 

@@ -8,13 +8,16 @@
         <meta charset="UTF-8">
         <title>공지사항 > 학부공지사항</title>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+ 
  <script>var result = "${msg}"; 
      if (result == "addSuccess") { 
     		alert("해당 글이 즐겨찾기에 추가되었습니다."); }  </script>
+    		
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_content.css">
     </head>
     <body>
+     <form action="${path}/mypage/notice/starPost" method="post">
         <div id="page">
             <div class="header">
                 <div class="logo">
@@ -98,7 +101,7 @@
                     <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
             </footer>
         </div>
-
+</form>
         <script> 
         $(document).ready(function () { 
         	
@@ -106,10 +109,17 @@
         	console.log(formObj); 
         	
         	$("#addBtn").on("click", function () { 
-        		formObj.attr("action", "${path}/mypage/notice/addstar"); ; 
+        		formObj.attr("action", "/mypage/notice/starPost"); 
         		formObj.submit(); 
         	});
         	});
+        $(function(){
+            $('input').iCheck({
+               checkboxClass:'icheckbox_square-blue',
+               radioClass:'iradion_square-blue',
+               increaseArea:'20%'
+            });
+         });
          </script>
 </body>
 </html>

@@ -73,12 +73,6 @@
                                 <br><br><br><br>
                             </div>
                         </div>
-                        
-                        
-                                
-                              <%--  <form action="${path}/mypage/lab/apply">
-							<button>랩실 신청</button>
-</form>  --%>
                             </div>
                             <br><br>
                         </div>
@@ -99,12 +93,6 @@
                     <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
             </footer>
         </div>
-<!-- <script>
-var msg="${msg}";
-if(msg== "APPLYED"){
-   alert("랩실 신청이 완료되었습니다.");
-}
-</script>
- -->
+
 </body>
 </html>

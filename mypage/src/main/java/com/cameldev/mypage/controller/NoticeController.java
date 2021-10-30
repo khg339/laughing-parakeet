@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cameldev.mypage.domain.CommentVO;
 import com.cameldev.mypage.domain.NoticeDTO;
@@ -91,16 +92,29 @@ public class NoticeController {
 	 * model.addAttribute("commentlist",list); }
 	 */
 	//북마크 처리
-		@RequestMapping(value = "/addstar", method = RequestMethod.POST) 
-		public String addstar( HttpSession session, StarVO starVO, String noticeno) throws Exception { 
+		@RequestMapping(value = "/starPost", method = RequestMethod.POST) 
+		public String addstar( RedirectAttributes redirectAttributes,HttpSession session, StarVO starVO, String noticeno) throws Exception { 
 			int memberno=(int) session.getAttribute("mno");
 			starVO.setMemberno(memberno);
 			
 			starService.addstar(starVO);
 			noticeno = starVO.getNoticeno();
-			
+			redirectAttributes.addFlashAttribute("msg", "APPLYED");
 		    return "redirect:/notice/noticeList/read/"+noticeno; 
 		    
 		   }
+		
+		//북마크 처리
+				@RequestMapping(value = "/addstar", method = RequestMethod.POST) 
+				public String addstar2( RedirectAttributes redirectAttributes,HttpSession session, StarVO starVO, String noticeno) throws Exception { 
+					int memberno=(int) session.getAttribute("mno");
+					starVO.setMemberno(memberno);
+					
+					starService.addstar(starVO);
+					noticeno = starVO.getNoticeno();
+					redirectAttributes.addFlashAttribute("msg", "APPLYED");
+				    return "redirect:/notice/noticeList2/read2/"+noticeno; 
+				    
+				   }
 
 }
