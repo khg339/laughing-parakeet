@@ -21,5 +21,9 @@ public class LabDAOImpl implements LabDAO{
 	public List<LabDTO2> list() throws Exception {
 		return sql.selectList(namespace + ".lablist");
 	}
+	@Override
+	public List<LabDTO2> list2() throws Exception {
+		return sql.selectList(namespace + ".lablist2");
+	}
 
 }

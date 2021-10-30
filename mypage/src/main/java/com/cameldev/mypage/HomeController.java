@@ -2,6 +2,7 @@ package com.cameldev.mypage;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import javax.inject.Inject;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.cameldev.mypage.controller.UserRegisterController;
+import com.cameldev.mypage.domain.LabDTO2;
+import com.cameldev.mypage.service.LabService;
 import com.mysql.jdbc.Connection;
 
 /**
@@ -34,10 +37,10 @@ public class HomeController {
 		
 		try {
 			Connection conn = (Connection) dataSource.getConnection();
-			System.out.println("¼º°ø : " + conn);
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ : " + conn);
 			
 			} catch (Exception ex){
-				System.out.println("½ÇÆÐ..!");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½..!");
 				ex.printStackTrace();
 			}
 		
@@ -52,6 +55,7 @@ public class HomeController {
 		
 		return "home";
 	}
+	
 	
 	
 	

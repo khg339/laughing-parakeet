@@ -19,13 +19,13 @@
         <div id="page">
             <div class="header">
                 <div class="logo">
-                    <a href="Main.html"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
+                    <a href="/mypage/lab/home"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
                 </div>
                	<div class="menubar">
                      <ul class="upper_nav">
-                        <li><a href="Main.html">HOME</a></li>
+                        <li><a href="/mypage/lab/home">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
-                        <li><a href="Mypage_info.html">MYPAGE</a></li>
+                        <li><a href="/mypage/user/my">MYPAGE</a></li>
                     </ul>
 
                     <ul class="nav">
@@ -37,42 +37,37 @@
                     </ul>
                 </div>
             </div>
+            
+            
             <div class="content">
                 <div id="nav_box">
                     <table id="nav_table" cellspacing="0" cellpadding="10">
                         <caption><b>졸업논문</b></caption>
-                        <tr><td><a href="Thesis.html">전체보기</a></td></tr>
-                        <tr><td><a href="Thesis_2021.html">2021</a></td></tr>
-                        <tr><td><a href="Thesis_2021.html">2020</a></td></tr>
-                        <tr><td><a href="Thesis_2021.html">2019</a></td></tr>
-                        <tr><td><a href="Thesis_2021.html">2018</a></td></tr>
-                        <tr><td><a href="Thesis_2021.html">2017</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">전체보기</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2021년도</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2020년도</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2019년도</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2018년도</a></td></tr>
+                        <tr><td><a href="/mypage/thesis/thesisList">2017년도</a></td></tr>
                     </table>
                 </div>
                 <div id="content_box">
                     <div><h2>졸업논문</h2><br><br>
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png"class="tri_icon"><b>전체보기</b><br><br><br>
                         <table border="0">
-                            <tr>
-            <td>논문번호</td>
-            <td>작성자학번</td>
-            <td>논문제목</td>
-            <td>작성일</td>
-            <td>내용</td>
-            
-        </tr>
-        <c:forEach items="${thesislist}" var="thesislist">
- 			<tr>
- 				
-				  <td>${thesislist.thesisno}</td>
-				  <td>${thesislist.memberno}</td>
-				  <td>${thesislist.title}</td>
-				  <td>${thesislist.datetime}</td>
-				  <td>${thesislist.content}</td>
- 			</tr>
-		</c:forEach>
-   
-</table>
+                        <thead><tr><th>번호</th><th id="title">제목</th><th>학번</th><th>작성일</th><th>즐겨찾기</th></tr></thead>
+                
+				        <c:forEach items="${thesislist}" var="thesislist">
+				 			<tr>
+								  <td>${thesislist.thesisno}</td>
+								  <td><a href="/mypage/thesis/thesisList/thesisread/${thesislist.thesisno}">${thesislist.title}</a></td>
+								  <td>${thesislist.memberno}</td>  
+								  <td>${thesislist.datetime}</td>
+								  <td><img src="${pageContext.request.contextPath}/images/plus_icon.png" class="plus_icon"></td>
+								  
+				 			</tr>
+						</c:forEach>
+						</table>
                         <br><br>
                     </div>
                 </div>

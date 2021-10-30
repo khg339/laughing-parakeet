@@ -15,11 +15,11 @@
         <div id="page">
             <div class="header">
                 <div class="logo">
-                    <a href="Main.html"><img src="${pageContext.request.contextPath}/images/hsLogo.png"alt="한신대학교 컴퓨터공학부"></a>
+                    <a href="/mypage/lab/home"><img src="${pageContext.request.contextPath}/images/hsLogo.png"alt="한신대학교 컴퓨터공학부"></a>
                 </div>
                 <div class="menubar">
                     <ul class="upper_nav">
-                        <li><a href="/mypage/">HOME</a></li>
+                        <li><a href="/mypage/lab/home">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
                         <li><a href="/mypage/user/my">MYPAGE</a></li>
                     </ul>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="content">
-                <div id="nav_box">
+                 <div id="nav_box">
                     <table id="nav_table" cellspacing="0" cellpadding="10">
                         <caption><b>교수님공지</b></caption>
                         <tr><td><a href="/mypage/notice/noticeList2">전체보기</a></td></tr>
@@ -52,31 +52,23 @@
                         <tr><td><a href="Pro_Jo.html">조재춘</a></td></tr>
                         <tr><td><a href="Pro_LeeY.html">이양선</a></td></tr>
                     </table>
-                </div>
+                </div> 
                 <div id="content_box">
-                    <div><h2>교수님공지</h2><br><br>
+                    <div id="content1"><h2>교수님공지</h2><br><br>
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>전체보기</b><br><br><br>
                         <table border="0">
                              <tr>
-            <!-- <td>공지번호</td> -->
-            <td id="title">제목</td>
-            <td>작성자</td>
-            <!-- <td>내용</td> -->
-            <td>작성일</td>
-            <!-- <td>유형</td> -->
-            
-        </tr>
-        <c:forEach items="${noticelist2}" var="noticelist2">
- 			<tr>
- 				
-				  <%-- <td>${noticelist2.noticeno}</td> --%>
-				  <td>${noticelist2.title}</td>
-				  <td>${noticelist2.name}</td>
-				  <%-- <td>${noticelist2.content}</td> --%>
-				  <td>${noticelist2.datetime}</td>
-				 <%--  <td>${noticelist2.n_type}</td> --%>
- 			</tr>
-		</c:forEach>
+					            <td id="title">제목</td>
+					            <td>작성자</td>
+					            <td>작성일</td>  
+					        </tr>
+					        <c:forEach items="${noticelist2}" var="noticelist2">
+					 			<tr>
+									  <td><a href="/mypage/notice/noticeList2/read2/${noticelist2.noticeno}">${noticelist2.title}</td>
+									  <td>${noticelist2.name}</td>
+									  <td>${noticelist2.datetime}</td>
+					 			</tr>
+							</c:forEach>
 						       
                         <br><br>
                     </div>
@@ -95,7 +87,7 @@
                     <li><a href="http://sugang.hs.ac.kr/login">수강신청</a></li>
                     <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li>
             </footer>
-        </div>
+        
     </body>
 </html>
 

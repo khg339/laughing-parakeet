@@ -8,14 +8,17 @@ import javax.inject.Inject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cameldev.mypage.domain.CommentVO;
 import com.cameldev.mypage.domain.NoticeDTO;
 import com.cameldev.mypage.domain.NoticeForm;
+import com.cameldev.mypage.persistence.CommentDAO;
 import com.cameldev.mypage.persistence.NoticeDAO;
 
 @Service
 public class NotcieServiceImpl implements NoticeService {
 	@Inject
 	private NoticeDAO noticeDAO;
+	
 	
 	@Override
 	public List<NoticeDTO>list()  throws Exception{
@@ -34,8 +37,17 @@ public class NotcieServiceImpl implements NoticeService {
 		return noticeDAO.select(noticeno);
 	}
 	@Override
+	public NoticeDTO read2(String noticeno) {
+		return noticeDAO.select(noticeno);
+	}
+	@Override
 	public NoticeDTO read3(String noticeno) {
 		return noticeDAO.select(noticeno);
 	}
+	
+	/*
+	 * @Override public List<CommentVO>comlist(String noticeno) throws Exception{
+	 * return noticeDAO.comlist(noticeno); }
+	 */
 
 }

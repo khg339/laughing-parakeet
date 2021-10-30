@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.cameldev.mypage.domain.CommentVO;
 import com.cameldev.mypage.domain.NoticeDTO;
 
 @Repository
@@ -35,5 +36,11 @@ public class NoticeDAOImpl implements NoticeDAO {
 		NoticeDTO dto=(NoticeDTO) sql.selectOne("select",noticeno);
 		return dto;
 	}
+	
+	
+	/*
+	 * @Override public List<CommentVO> comlist(String noticeno) throws Exception {
+	 * return sql.selectList(namespace + ".commentlist"); }
+	 */
 
 }

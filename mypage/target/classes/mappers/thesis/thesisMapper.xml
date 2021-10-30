@@ -7,5 +7,10 @@
         SELECT *
 		FROM computer_engineering.thesis
     </select>
+    <select id="thesisselect" parameterType="String" resultType="com.cameldev.mypage.domain.ThesisDTO">
+	    select *
+		from computer_engineering.thesis
+		where thesisno=#{thesisno} 
+    </select>
     
     </mapper>

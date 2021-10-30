@@ -16,11 +16,11 @@
  <div id="page">
             <div class="header">
                 <div class="logo">
-                    <a href="Main.html"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
+                    <a href="/mypage/lab/home"><img src="${pageContext.request.contextPath}/images/hsLogo.png" alt="한신대학교 컴퓨터공학부"></a>
                 </div>
                 <div class="menubar">
                      <ul class="upper_nav">
-                        <li><a href="/mypage/">HOME</a></li>
+                        <li><a href="/mypage/lab/home">HOME</a></li>
                         <li><a href="Sitemap.html">SITEMAP</a></li>
                         <li><a href="/mypage/notice/my">MYPAGE</a></li>
                     </ul>
@@ -40,9 +40,10 @@
                         <caption><b>MYPAGE</b></caption>
                         <tr><td><a href="my">MY 정보</a></td></tr>
                         <tr><td><a href="star">즐겨찾기 목록</a></td></tr>
+                        <tr><td><a href="/mypage/lab/state">연구실 지원</a></td></tr>
                     </table>
                 </div>
-<div id="content_box">
+				<div id="content_box">
                     <div><h2>MYPAGE</h2><br><br>
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>MY 정보</b><br><br><br>
                         <table border="0">

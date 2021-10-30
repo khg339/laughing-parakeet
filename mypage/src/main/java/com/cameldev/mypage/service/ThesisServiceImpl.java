@@ -17,5 +17,10 @@ public class ThesisServiceImpl implements ThesisService{
 	public List<ThesisDTO>list() throws Exception{
 		return thesisDAO.list();
 	}
+	
+	@Override
+	public ThesisDTO read(String thesisno) {
+		return thesisDAO.thesisselect(thesisno);
+	}
 
 }
