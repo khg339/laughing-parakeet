@@ -29,6 +29,15 @@
 		where n_type="취업"
 		order by datetime desc
     </select>
-    
+    <!-- <select resultType="com.cameldev.mypage.domain.CommentVO" id="commentlist" parameterType="String">
+	    select *from computer_engineering.comment
+	    where noticeno=#{noticeno}
+	    order by datetime desc 
+    </select> -->
+    <select id="commentlist" parameterType="String" resultType="com.cameldev.mypage.domain.CommentVO">
+	    select *from computer_engineering.comment
+	    where noticeno=#{noticeno}
+	    order by datetime desc 
+    </select> 
     
 </mapper>

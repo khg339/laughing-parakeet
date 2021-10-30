@@ -1,3 +1,5 @@
+<%@page import="javax.inject.Inject"%>
+<%@page import="com.cameldev.mypage.service.CommentService"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -57,11 +59,20 @@
                     <div id="content2">
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>댓글</b><br><br>
                         <div>
-                            <table>
-                                <tr><th id="comment">작성자이름</th><td>오 정말 좋은 생각이에요 굳굳굳ㄱㄷ </td></tr>
-                                <tr><th id="comment">작성자이름</th><td>음 저는 잘모르겠네요 음으믕ㅁㅇ하하 음 저는 잘모르겠네요 하하음 저는 잘모르겠네요 음으믕ㅁㅇ하하</td></tr>
-                                <tr><th id="comment">작성자이름</th><td>반대합니다!</td></tr>
-                            </table>
+                           <table>
+							<thead><tr><th>번호</th><th>내용</th><th>학번</th><th>날짜</th></tr></thead>
+							<tbody>
+							
+							<c:forEach items="${CommentVO}" >
+							 <tr>
+						         <td>${CommentVO.commentno}</td>
+						         <td>${CommentVO.content} </td>
+						         <td>${CommentVO.memberno}</td>
+						         <td>${CommentVO.datetime}</td>
+						     </tr>
+						   </c:forEach>
+						   </tbody>
+						   </table>
                         </div>
                     </div>
                 </div>

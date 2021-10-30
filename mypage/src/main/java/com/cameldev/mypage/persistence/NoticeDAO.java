@@ -2,6 +2,7 @@ package com.cameldev.mypage.persistence;
 
 import java.util.List;
 
+import com.cameldev.mypage.domain.CommentVO;
 import com.cameldev.mypage.domain.NoticeDTO;
 
 public interface NoticeDAO {
@@ -10,4 +11,6 @@ public interface NoticeDAO {
 	public List list3() throws Exception;
 	public abstract NoticeDTO select(String noticeno);
 
+	/* public List comlist(String noticeno) throws Exception; */
+	
 }
