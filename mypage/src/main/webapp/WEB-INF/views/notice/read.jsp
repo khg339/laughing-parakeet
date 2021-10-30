@@ -7,6 +7,10 @@
     <head>
         <meta charset="UTF-8">
         <title>공지사항 > 학부공지사항</title>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+ <script>var result = "${msg}"; 
+     if (result == "addSuccess") { 
+    		alert("해당 글이 즐겨찾기에 추가되었습니다."); }  </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_content.css">
     </head>
@@ -43,6 +47,9 @@
                 <div id="content_box">
                     <div id="content1"><h2>공지사항</h2><br><br>
                         <img src="${pageContext.request.contextPath}/images/tri_icon.png" class="tri_icon"><b>${noticeDTO.title}</b><br><br><hr><br>
+                        <form role="form" method="post"> 
+        <input type="hidden" name="noticeno" value="${noticeDTO.noticeno} "> 
+        </form><button type="submit" id="addBtn">즐겨찾기</button>
                         <div>
                             <table>
 							<tr>
@@ -92,5 +99,17 @@
             </footer>
         </div>
 
+        <script> 
+        $(document).ready(function () { 
+        	
+        	var formObj = $("form[role='form']"); 
+        	console.log(formObj); 
+        	
+        	$("#addBtn").on("click", function () { 
+        		formObj.attr("action", "${path}/mypage/notice/addstar"); ; 
+        		formObj.submit(); 
+        	});
+        	});
+         </script>
 </body>
 </html>

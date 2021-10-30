@@ -13,6 +13,11 @@
             #btn{width:50px; height:30px; background-color: rgb(245, 236, 235); color:black; font-size:12px;
                 border:none; border-radius:10px; margin-top: 20px; margin-left: 930px;}
         </style>
+             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script>var result = "${msg}"; 
+     if (result == "delSuccess") { 
+    		alert("해당 글이 즐겨찾기에서 삭제되었습니다."); }  </script>
+        
      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>

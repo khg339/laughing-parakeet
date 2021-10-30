@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,10 +18,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cameldev.mypage.domain.CommentVO;
 import com.cameldev.mypage.domain.NoticeDTO;
 import com.cameldev.mypage.domain.NoticeForm;
+import com.cameldev.mypage.domain.StarVO;
 import com.cameldev.mypage.domain.majorDTO;
 import com.cameldev.mypage.service.CommentService;
 import com.cameldev.mypage.service.NotcieServiceImpl;
 import com.cameldev.mypage.service.NoticeService;
+import com.cameldev.mypage.service.StarService;
 import com.cameldev.mypage.service.majorService;
 
 
@@ -31,6 +34,8 @@ public class NoticeController {
 	@Inject
 	NoticeService noticeservice;
 	CommentService commentservice;
+	@Inject
+	StarService starService;
 	
 	@RequestMapping(value = "/noticeList", method=RequestMethod.GET)
 	public void getNoticeList(Model model) throws Exception{
@@ -85,5 +90,17 @@ public class NoticeController {
 	 * Exception{ List<CommentVO>list=null; list=noticeservice.comlist(noticeno);
 	 * model.addAttribute("commentlist",list); }
 	 */
+	//북마크 처리
+		@RequestMapping(value = "/addstar", method = RequestMethod.POST) 
+		public String addstar( HttpSession session, StarVO starVO, String noticeno) throws Exception { 
+			int memberno=(int) session.getAttribute("mno");
+			starVO.setMemberno(memberno);
+			
+			starService.addstar(starVO);
+			noticeno = starVO.getNoticeno();
+			
+		    return "redirect:/notice/noticeList/read/"+noticeno; 
+		    
+		   }
 
 }

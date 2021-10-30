@@ -32,6 +32,7 @@
     </interceptor> 
     <interceptor> 
 		<mapping path="/user/my"/> 
+		<mapping path="/notice/addstar"/>
 		<beans:ref bean="authInterceptor"/> 
 	</interceptor> 
 	</interceptors>

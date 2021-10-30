@@ -13,13 +13,17 @@ import com.cameldev.mypage.persistence.StarDAO;
 public class StarServiceImpl implements StarService {
 	
 	
-	private final StarDAO starDAO;
+private final StarDAO starDAO;
 	
 	@Inject
 	public StarServiceImpl(StarDAO starDAO) {
 		this.starDAO = starDAO;
 	}
 
+
+	@Override public void addstar(StarVO starVO) throws Exception { 
+		starDAO.addstar(starVO); 
+	}
 
 	@Override 
 	public void delete(String noticeno) throws Exception { 
@@ -31,5 +35,4 @@ public class StarServiceImpl implements StarService {
 		System.out.println("S : starlist()실행");
 		return starDAO.starlist(memberno); 
 	}
-
 }
