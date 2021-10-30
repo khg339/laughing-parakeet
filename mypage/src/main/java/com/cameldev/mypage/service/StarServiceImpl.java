@@ -21,6 +21,10 @@ public class StarServiceImpl implements StarService {
 	}
 
 
+	@Override public void addstar(StarVO starVO) throws Exception { 
+		starDAO.addstar(starVO); 
+	}
+
 	@Override 
 	public void delete(String noticeno) throws Exception { 
 		starDAO.delete(noticeno); 

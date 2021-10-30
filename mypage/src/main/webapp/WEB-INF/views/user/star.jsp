@@ -14,6 +14,9 @@
                 border:none; border-radius:10px; margin-top: 20px; margin-left: 930px;}
         </style>
      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script>var result = "${msg}"; 
+     if (result == "delSuccess") { 
+    		alert("해당 글이 즐겨찾기에서 삭제되었습니다."); }  </script>
     </head>
     <body>
         <div id="page">

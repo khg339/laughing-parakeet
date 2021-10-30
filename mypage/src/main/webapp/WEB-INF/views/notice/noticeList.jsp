@@ -8,7 +8,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/Style_table.css">
 
-
 </head>
 <body>
 <div id="page">
@@ -54,8 +53,10 @@
                     <td><a href="/mypage/notice/noticeList/read/${noticelist.noticeno}">${noticelist.title} </a></td>
                     <td>${noticelist.name}</td>
                     <td>${noticelist.datetime}</td>
-                    <td><img src="${pageContext.request.contextPath}/images/plus_icon.png" class="plus_icon"></td>
-                      </tr>
+                    <td>
+                    
+                    </td>
+                     </tr>
                       </c:forEach>
                       </tbody>            
                         </table>
@@ -77,6 +78,7 @@
                     <li><a href="http://ipp.hs.ac.kr/index.do">IPP센터</a></li></ul>
             </footer>
         </div>
+
             
 </body>
 </html>

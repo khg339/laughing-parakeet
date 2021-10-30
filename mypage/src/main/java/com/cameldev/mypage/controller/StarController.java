@@ -45,6 +45,8 @@ public class StarController {
 		for(String n_no : noticeno) {
 			starService.delete(n_no);
 		}
+		
+		redirectAttributes.addFlashAttribute("msg", "delSuccess");
 	    return "redirect:/user/star"; 
     }
 

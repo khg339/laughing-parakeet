@@ -6,6 +6,8 @@ import com.cameldev.mypage.domain.StarVO;
 import com.cameldev.mypage.persistence.StarDAO;
 
 public interface StarService {
+	
+	void addstar(StarVO starVO) throws Exception;
 
 	void delete(String noticeno) throws Exception;
 

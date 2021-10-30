@@ -10,4 +10,6 @@ public interface NoticeDAO {
 	public List list3() throws Exception;
 	public abstract NoticeDTO select(String noticeno);
 
+	
+	
 }

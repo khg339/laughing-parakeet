@@ -23,6 +23,11 @@ public class StarDAOImpl implements StarDAO {
 	}
 
 	@Override 
+	public void addstar(StarVO starVO) throws Exception {
+		sqlSession.insert(NAMESPACE + ".add", starVO); 
+	}
+
+	@Override 
 	public void delete(String noticeno) throws Exception {
 		sqlSession.delete(NAMESPACE + ".delete", noticeno); }
 
